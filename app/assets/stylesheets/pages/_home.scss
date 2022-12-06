@@ -1,1 +1,46 @@
 // Specific CSS for your home-page
+body {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  text-align: center;
+}
+
+#home-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 5px #ccc;
+  border:2px solid #fff;
+}
+
+.home-container {
+  margin-top: 20%;
+}
+
+.home-btn {
+  background-color: #5B67CA;
+  border-radius: 10px;
+  color: #FFFFFF;
+  font-weight: 200;
+  padding: 7px;
+  width: 200px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.content-container{
+  margin-top: 20%;
+  p {
+    font-weight: 200;
+    margin-top: 10px;
+    color: #4d4a49;
+    text-shadow: 5px 5px 5px rgb(206, 205, 205);
+  }
+  h1 {
+    color: #5B67CA;
+    font-weight:900;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px rgb(206, 205, 205);
+  }
+}
