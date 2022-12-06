@@ -1,0 +1,9 @@
+<div class="container">
+  <%= simple_form_for(@habit) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :start_date, as: :string %>
+    <%= f.input :end_date, as: :string %>
+    <%= f.submit %>
+  <% end %>
+</div>
