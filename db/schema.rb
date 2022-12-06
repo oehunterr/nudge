@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_06_074144) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_100210) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "groups", force: :cascade do |t|
-    t.bigint "habit_id", null: false
     t.string "name"
+    t.bigint "habit_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["habit_id"], name: "index_groups_on_habit_id"
   end
 
   create_table "habits", force: :cascade do |t|
-    t.bigint "milestone_id", null: false
     t.string "title"
     t.boolean "master", default: false
     t.date "start_date", null: false
@@ -32,7 +31,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_074144) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["milestone_id"], name: "index_habits_on_milestone_id"
     t.index ["user_id"], name: "index_habits_on_user_id"
   end
 
@@ -42,14 +40,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_074144) do
     t.datetime "start_time", null: false
     t.datetime "end_time", null: false
     t.text "description"
+    t.bigint "habit_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["habit_id"], name: "index_milestones_on_habit_id"
   end
 
   create_table "user_groups", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.bigint "group_id", null: false
     t.boolean "creator", default: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_user_groups_on_group_id"
@@ -66,13 +66,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_074144) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
+    t.integer "age"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "groups", "habits"
-  add_foreign_key "habits", "milestones"
   add_foreign_key "habits", "users"
+  add_foreign_key "milestones", "habits"
   add_foreign_key "user_groups", "groups"
   add_foreign_key "user_groups", "users"
 end

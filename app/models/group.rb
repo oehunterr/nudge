@@ -1,4 +1,6 @@
 class Group < ApplicationRecord
   belongs_to :habit
-  validates :name, :habit_id, uniqueness:true, presence:true
+  has_many :user_groups
+  has_many :users, through: :user_groups
+  validates :habit, :name, presence: true
 end

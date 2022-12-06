@@ -1,3 +1,4 @@
 class Milestone < ApplicationRecord
-  validates :start_time, :end_time, :title, presence:true
+  belongs_to :habit
+  validates :title, :start_time, :end_time, presence: true
 end
