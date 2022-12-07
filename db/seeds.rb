@@ -19,7 +19,7 @@ puts "Users deleted"
 
 puts "\ncreating users..."
 first_user = User.create!(email: "jones_wong@icloud.com", password: "jones_wong@icloud.com", first_name: "Jones", last_name: "Wong", age: 18)
-second_user = User.create!(email: "test@test.com", password: "test@test.com", first_name: "test", last_name: "tester", age: 25)
+second_user = User.create!(email: "test@test.com", password: "test@test.com", first_name: "Steve", last_name: "tester", age: 25)
 puts "#{first_user.first_name} is created"
 puts "#{second_user.first_name} is created"
 
