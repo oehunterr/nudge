@@ -17,5 +17,20 @@
     </div>
   <% end %>
 </div>
+</div>
+        /<div class="forgot">
+          /<%= link_to "Forgot password?"  %>
+       /</div>
 
-<%= render "devise/shared/links" %>
+
+      <div class="loginbutton">
+          <%=  f.button :submit, "Sign in" %>
+      </div>
+    <% end %>
+
+    <div class = "container footer">
+      <div class ="link">
+        <%= link_to "Don't have an account?", new_user_registration_path %>
+      </div>
+    </div>
+  </div>

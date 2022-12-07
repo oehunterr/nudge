@@ -2,6 +2,17 @@ class HabitsController < ApplicationController
   def index
     @habits = Habit.all
     # @habit = Habit.find(params[:id])
+    if params[:query].present?
+      sql_query = <<~SQL
+        habits.title @@ :query
+        OR habits.description @@ :query
+        OR users.first_name @@ :query
+        OR users.last_name @@ :query
+      SQL
+      @habits = Habit.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @habits = Habit.all
+    end
   end
 
   def show
