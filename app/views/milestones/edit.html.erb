@@ -1,11 +1,12 @@
+<h1>Hey, you're in milestones/edit.html.erb <br>Edit a milestone here:</h1>
 <div class="container">
-  <div class="habits-new">
-    <%= simple_form_for @habit, data: { controller: 'flatpickr' } do |f| %>
+  <div class="milestone-new">
+    <%= simple_form_for @milestone, data: { controller: 'flatpickr' } do |f| %>
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
       <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
-      <%= f.submit class: "habits-new-btn"%>
+      <%= f.submit class: "milestone-new-btn"%>
     <% end %>
   </div>
 </div>

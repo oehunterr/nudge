@@ -1,23 +1,27 @@
-<body>
-
-  <div class="container">
-    <div class="sign-in">
-      <h2>Sign In</h2>
+<h2>Log in</h2>
+<div class="container">
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-        <div class="form-actions">
-          <%= f.input :email,
-                      required: false,
-                      autofocus: true,
-                      input_html: { autocomplete: "email", class: "nice-class" } %>
-          <%= f.input :password,
-                      required: false,
-                      input_html: { autocomplete: "current-password", class: "nice-class"} %>
-        </div>
-        <div class="forgot">
-          <%= link_to "Forgot password?"  %>
-       </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Log in" %>
+    </div>
+  <% end %>
+</div>
+</div>
+        /<div class="forgot">
+          /<%= link_to "Forgot password?"  %>
+       /</div>
+
 
       <div class="loginbutton">
           <%=  f.button :submit, "Sign in" %>
@@ -30,4 +34,3 @@
       </div>
     </div>
   </div>
-</body>
