@@ -1,19 +1,18 @@
 <body>
 
   <div class="container">
-    <div class="sign-in">
-      <h2>Sign In</h2>
-    </div>
-
+      <h2 class="sign-in">Sign In</h2>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
         <div class="form-actions">
           <%= f.input :email,
+                      label: false,
                       required: false,
                       autofocus: true,
-                      input_html: { autocomplete: "email", class: "nice-class" } %>
+                      input_html: { autocomplete: "email", class: "nice-class", placeholder: "Email" } %>
           <%= f.input :password,
+                      label:false,
                       required: false,
-                      input_html: { autocomplete: "current-password", class: "nice-class"} %>
+                      input_html: { autocomplete: "current-password", class: "nice-class", placeholder: "Password" } %>
         </div>
         <div class="forgot">
           <%= link_to "Forgot password?"  %>
