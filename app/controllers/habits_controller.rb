@@ -1,6 +1,7 @@
 class HabitsController < ApplicationController
   def index
     @habits = Habit.all
+    # @habit = Habit.find(params[:id])
   end
 
   def show

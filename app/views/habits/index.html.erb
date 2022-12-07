@@ -3,9 +3,14 @@
   </div> <%#class="display-flex align-center new-opportunities-container justify-space-between margin-b-24" %>
     <div class="row">
       <ul>
-        <li><#%= @habits.each do |habit| %></li>
-        <li><#%= habit.title %></li>
-        <li><#% end %>
+        <% if @habit.user == current_user %>
+          <li><% @habits.each do |habit| %></li>
+          <li><%= habit.title %></li>
+          <% end %>
+        <% else %>
+          <p> Looks like you don't have any milestones to complete <br><p>
+          <p> Tap the plus button to create a new habit</p>
+        <% end %>
       <ul>
     </div>
   </div>

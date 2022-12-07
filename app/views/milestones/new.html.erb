@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="milestone-new">
+    <%= simple_form_for [@habit, @milestone], data: { controller: 'flatpickr' } do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%# <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+      <%# <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
+      <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
+      <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" }, id: 'end_time' } %>
+      <%# ~~ %>
+      <%= f.submit class: "milestone-new-btn"%>
+    <% end %>
+  </div>
+</div>
