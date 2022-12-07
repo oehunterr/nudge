@@ -1,3 +1,9 @@
+.search-container {
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
 .search-bar-border {
   display: flex;
   width: 100%;
@@ -5,6 +11,7 @@
   border-radius: 15px;
   color: #C8CDD9;
   border: 1px solid;
+
 }
 .search-bar-layout {
   font-family: 'Hind Siliguri';
@@ -32,4 +39,5 @@
 
 .fa-solid {
   margin: 15px;
+  cursor: pointer;
 }

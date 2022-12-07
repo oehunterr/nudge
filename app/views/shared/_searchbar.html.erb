@@ -1,16 +1,18 @@
-   <%= form_with url: habits_path, method: :get, class: "fa fa-search search-bar-border" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "search-bar-layout",
-          placeholder: "Look for Habit"
-        %>
-        <i class="fa-solid fa-xmark"></i>
-        <% end %>
-      <div id="habits">
-        <% @habits.each do |item| %>
-          <h4><%= item.title %></h4>
-          <h5><%= item.description %></h5>
-          <p><%= item.start_date.strftime(' %a, %d %B, %Y') %></p>
-          <p><%= item.end_date.strftime(' %a, %d %B, %Y') %></p>
-        <% end %>
-      </div>
+<div class="search-container">
+  <%= form_with url: habits_path, method: :get, class: "fa fa-search search-bar-border" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "search-bar-layout",
+      placeholder: "Look for Habit"
+      %>
+    <i class="fa-solid fa-xmark" ></i>
+    <% end %>
+    <div id="habits">
+      <% @habits.each do |item| %>
+      <h4><%= item.title %></h4>
+      <h5><%= item.description %></h5>
+      <p><%= item.start_date.strftime(' %a, %d %B, %Y') %></p>
+      <p><%= item.end_date.strftime(' %a, %d %B, %Y') %></p>
+      <% end %>
+    </div>
+</div>
