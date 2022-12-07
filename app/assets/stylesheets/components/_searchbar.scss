@@ -1,0 +1,43 @@
+.search-container {
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+.search-bar-border {
+  display: flex;
+  width: 100%;
+  background: #F6F6F6;
+  border-radius: 15px;
+  color: #C8CDD9;
+  border: 1px solid;
+
+}
+.search-bar-layout {
+  font-family: 'Hind Siliguri';
+  //font-style: normal;
+  //font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #565656;
+  background-color: #F6F6F6;
+  text-align: left;
+  padding: 10px;
+  border: 0px;
+  //form control
+  //display: block;
+  width: 100%;
+  //background-clip: padding-box;
+  //appearance: none;
+  //border-radius: 2px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fa-search::before {
+  margin: 15px;
+}
+
+.fa-solid {
+  margin: 15px;
+  cursor: pointer;
+}

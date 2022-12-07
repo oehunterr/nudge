@@ -2,11 +2,7 @@
   <div id="habitcard"class="d-flex flex-column"></div>
   </div> <%#class="display-flex align-center new-opportunities-container justify-space-between margin-b-24" %>
     <div class="row">
-      <ul>
-        <li><#%= @habits.each do |habit| %></li>
-        <li><#%= habit.title %></li>
-        <li><#% end %>
-      <ul>
+      <%= render "shared/searchbar" %>
     </div>
   </div>
 </div>
