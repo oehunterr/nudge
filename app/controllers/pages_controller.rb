@@ -14,4 +14,6 @@ class PagesController < ApplicationController
     @milestone = current_user.milestones
   end
 
+  def perfomance
+  end
 end
