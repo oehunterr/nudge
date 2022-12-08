@@ -5,12 +5,13 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @habit = current_user.habits
+    @milestone = current_user.milestones
   end
 
   def dashboard
-    @user = current_user
-    @habit = @user.habits
-    @milestone = @user.milestones
-
+    @habit = current_user.habits
+    @milestone = current_user.milestones
   end
+
 end

@@ -1,7 +1,7 @@
 <div class="title-top">
 <%= image_tag "avatar_img.jpg", {id:"avatar"} %>
-<h4><%= @user.first_name %></h4>
-<p><%= @user.email %></p>
+<h4><%= current_user.first_name %></h4>
+<p><%= current_user.email %></p>
 </div>
 
 <div class="container">
@@ -10,14 +10,14 @@
       <div class="icons habcolor">
           <i class="fa-solid fa-business-time"></i>
       </div>
-      <p><strong>Habits</strong></p>
+      <p><strong>Habits<%= @habit.size %></strong></p>
     </div>
 
     <div class="cards card-milestones">
       <div class="icons milcolour ">
         <i class="fa-solid fa-bullseye "></i>
       </div>
-      <p><strong>Milestones</strong></p>
+      <p><strong>Milestones<%= @milestone.size %></strong></p>
     </div>
   </div>
 
