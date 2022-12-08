@@ -8,10 +8,14 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href='https://css.gg/arrow-right.css' rel='stylesheet'>
+    <link href='https://css.gg/folder.css' rel='stylesheet'>
+    <link href='https://css.gg/flag.css' rel='stylesheet'>
+    <link href='https://css.gg/media-live.css' rel='stylesheet'>
+    <link href='https://css.gg/chevron-double-right.css' rel='stylesheet'>
   </head>
 
   <body>
-    <%# comment  %>
     <%= render "shared/navbar" %>
     <%= yield %>
     <%= render "shared/flashes" %>

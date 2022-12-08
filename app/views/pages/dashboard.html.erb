@@ -1,0 +1,39 @@
+<div class="dashboard-container">
+  <div class="dashboard-top-container">
+    <%= image_tag "avatar_img.jpg", {id: "avatar"} %>
+    <h1> Hi, <%= @user.first_name %> </h1>
+    <p> Let´s Create a new habit </p>
+  </div>
+  <div class="dashboard-habit-container">
+    <h1>My Habits</h1>
+    <div class="dashboard-btn">
+      <div class="btn-left">
+        <button class="on-going-btn">
+          <div class="btn-content-top">
+            <i class="gg-folder"></i>
+            <i class="gg-chevron-double-right"></i>
+          </div>
+          <div class="btn-content-bot">
+            <h5>On Going</h5>
+            <p><%= @habit.size %> habits</p>
+          </div>
+        </button>
+      </div>
+      <div class="btn-right">
+        <button class="milestones-btn">
+        <div class="btn-content-top">
+          <i class="gg-media-live"></i>
+          <i class="gg-chevron-double-right"></i>
+        </div>
+        <div class="btn-content-bot">
+          <h5>Milestones</h5>
+          <p><%= @milestone.size %> achievements</p>
+        </div>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="performance-container">
+    <h1>Performance</h1>
+  </div>
+</div>

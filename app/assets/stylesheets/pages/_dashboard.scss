@@ -1,0 +1,108 @@
+// Specific CSS for your dashboard-page
+body {
+  height: 100vh;
+}
+
+#avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.dashboard-top-container {
+  margin-top: 25%;
+  margin-left: 5%;
+  h1 {
+    text-align: left;
+    color: #12175E;
+    font-weight:900;
+    font-size: 30px;
+  }
+  p {
+    text-align: left;
+    font-weight: 200;
+    margin-top: 5px;
+    color: #4d4a49;
+    text-shadow: 2px 2px 3px rgb(206, 205, 205);
+  }
+}
+
+.dashboard-habit-container {
+  margin-top: 40px;
+  h1 {
+    margin-left: 5%;
+    text-align: left;
+    color: #12175E;
+    font-weight:900;
+    font-size: 30px;
+  }
+}
+
+.dashboard-btn {
+  display: flex;
+  justify-content: space-evenly;
+
+  .on-going-btn {
+    width: 140px;
+    height: 120px;
+    background: linear-gradient(#81e89e9b, #5bbf77);
+    border-radius: 15%;
+    border: 2px transparent;
+    color: #12175E;
+    font-weight: 400;
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 5%;
+  }
+
+  .milestones-btn {
+    width: 140px;
+    height: 120px;
+    background: linear-gradient(#7d88e7ca, #5d66bf);
+    border-radius: 15%;
+    border: 2px transparent;
+    color: #FFFFFF;
+    font-weight: 400;
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
+
+  }
+}
+
+.btn-content-top {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 5px;
+  .gg-media-live {
+    margin-top: 10px;
+  }
+  .gg-folder {
+    margin-top: 10px;
+  }
+}
+
+.btn-content-bot {
+  margin-top: 20px;
+
+  p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  h5 {
+    background-blend-mode: luminosity;
+    font-weight: 600;
+  }
+}
+
+.performance-container {
+  margin-top: 20px;
+  h1 {
+    margin-left: 5%;
+    text-align: left;
+    color: #12175E;
+    font-weight:900;
+    font-size: 30px;
+  }
+}
