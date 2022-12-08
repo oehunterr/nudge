@@ -1,26 +1,41 @@
-<h2>Sign up</h2>
-<div class="container">
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
-    <%= f.error_notification %>
+<body>
+  <div class="container">
+    <h2 class="sign-up">Sign up</h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
+      <%= f.error_notification %>
 
-      <div class="form-inputs">
+      <div class="form-inputs ">
+        <%= f.input :first_name,
+                    label: false,
+                    input_html: { class: "nice-classes", placeholder: "First Name" }%>
+        <%= f.input :last_name,
+                    label: false,
+                    required: true,
+                    input_html: { class: "nice-classes", placeholder: "Last Name"  } %>
         <%= f.input :email,
-                    required: true,
+                    label: false,
                     autofocus: true,
-                    input_html: { autocomplete: "email" }%>
+                    input_html: { autocomplete: "email", class: "nice-classes", placeholder: "Email"  }%>
         <%= f.input :password,
+                    label: false,
                     required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
+                    hint: ("Use 8 or more characters with a mix of capital letters & numbers" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password", class: "nice-classes", placeholder: "Password" } %>
         <%= f.input :password_confirmation,
+                    label: false,
                     required: true,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new-password", class: "nice-classes", placeholder: "Password confirmation" } %>
       </div>
+      <div class="form-actions signup-button">
+          <%= f.button :submit, "Sign up" %>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
       </div>
     <% end %>
+    <div class = "container footer-account">
+          <div class ="link">
+            <%= link_to "Have an account?", user_session_path %>
+          </div>
+        </div>
   </div>
- <%= render "devise/shared/links" %>
-</div>
+
+</body>
