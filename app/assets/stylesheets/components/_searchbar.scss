@@ -3,7 +3,17 @@
   align-items: center;
   justify-content: center;
   width: 400px;
+  &>.fa-search::before {
+    margin: 15px;
+  }
+  &>form {
+    &>.fa-solid {
+      margin: 15px;
+      cursor: pointer;
+    }
+  }
 }
+
 .search-bar-border {
   display: flex;
   width: 100%;
@@ -31,13 +41,4 @@
   //appearance: none;
   //border-radius: 2px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.fa-search::before {
-  margin: 15px;
-}
-
-.fa-solid {
-  margin: 15px;
-  cursor: pointer;
 }

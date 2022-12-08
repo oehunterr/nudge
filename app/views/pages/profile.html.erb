@@ -1,7 +1,7 @@
 <div class="title-top">
-<%= image_tag "avatar_img.jpg", {id:"avatar"} %>
-<h4><%= @user.first_name %></h4>
-<p><%= @user.email %></p>
+<%= image_tag "avatar_img.jpg", {id:"avatar-profile"} %>
+<h4><%= current_user.first_name %></h4>
+<p><%= current_user.email %></p>
 </div>
 
 <div class="container">
@@ -10,17 +10,16 @@
       <div class="icons habcolor">
           <i class="fa-solid fa-business-time"></i>
       </div>
-      <p><strong>Habits</strong></p>
+      <p><strong>Habits<%= @habit.size %></strong></p>
     </div>
 
     <div class="cards card-milestones">
       <div class="icons milcolour ">
         <i class="fa-solid fa-bullseye "></i>
       </div>
-      <p><strong>Milestones</strong></p>
+      <p><strong>Milestones<%= @milestone.size %></strong></p>
     </div>
   </div>
-
   <div class="grid second-line">
     <div class="cards card-perfomance">
       <div class="icons perfomancecolor">
@@ -36,7 +35,6 @@
       <p> <strong>Groups</strong> </p>
     </div>
   </div>
-
     <div class="grid third-line">
       <div class="cards card-create-group">
         <div class="icons crgroupcolor">

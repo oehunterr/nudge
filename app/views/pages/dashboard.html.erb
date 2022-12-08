@@ -1,7 +1,7 @@
 <div class="dashboard-container">
   <div class="dashboard-top-container">
     <%= image_tag "avatar_img.jpg", {id: "avatar"} %>
-    <h1> Hi, <%= @user.first_name %> </h1>
+    <h1> Hi, <%= current_user.first_name %> </h1>
     <p> Let´s Create a new habit </p>
   </div>
   <div class="dashboard-habit-container">
