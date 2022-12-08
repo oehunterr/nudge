@@ -1,6 +1,6 @@
 class HabitsController < ApplicationController
   def index
-    @habits = Habit.all
+    # @habits = Habit.all
     # @habit = Habit.find(params[:id])
     if params[:query].present?
       sql_query = <<~SQL

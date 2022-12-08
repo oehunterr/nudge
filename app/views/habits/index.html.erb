@@ -1,18 +1,19 @@
-<div class="container">
-  <div id="habitcard"class="d-flex flex-column"></div>
-  </div> <%#class="display-flex align-center new-opportunities-container justify-space-between margin-b-24" %>
-    <div class="row">
-      <ul>
-        /<% if @habit.user == current_user %>
-          /<li><% @habits.each do |habit| %></li>
-          /<li><%= habit.title %></li>
-          <% end %>
-        <% else %>
-          <p> Looks like you don't have any milestones to complete <br><p>
-          <p> Tap the plus button to create a new habit</p>
-        <% end %>
-      <ul>
-      <%= render "shared/searchbar" %
+<div class=“container”>
+<%= render "shared/searchbar" %>
+  <div id=“habitcard”class=“d-flex flex-column”></div>
+    </div> <%#class=“display-flex align-center new-opportunities-container justify-space-between margin-b-24" %>
+      <div class=“row”>
+        <ul>
+          <#% if @habit.user == current_user %>
+            <% @habits.each do |habit| %>
+            <li><%= habit.title %></li>
+            <% end %>
+          <#% else %>
+            <p> Looks like you don’t have any milestones to complete</p>
+            <p> Tap the plus button to create a new habit</p>
+          <#% end %>
+        <ul>
+      </div>
     </div>
   </div>
 </div>
