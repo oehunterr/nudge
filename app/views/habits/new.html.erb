@@ -1,6 +1,28 @@
 <div class="container">
-  <div class="habits-new">
-    <%= simple_form_for @habit, data: { controller: 'flatpickr' } do |f| %>
+  <div class="container">
+    <div class="habit-new-title">
+      <h1>Time to start living proactively 🧗‍♀️ rather than reactively🤳</h1>
+    </div>
+    <div class="container">
+      <h6>Take 2 minutes to think about ONE change you can make that will greatly impact your life</h6><br>
+      <h6>Maybe something that you've wanted to do all your life... it's about time you got going...</h6>
+    </div>
+  </div>
+  <div class="container">
+    <div class="habits-new">
+      <%= simple_form_for @habit, data: { controller: 'flatpickr' } do |f| %>
+        <%= f.input :title, input_html: { class: "form-input", placeholder: "My Habit" } %>
+        <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" }, class: "form-input", placeholder: "Begin your journey!" } %>
+        <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" }, placeholder: "The date you will be transformed" , id: 'end_time' } %>
+        <%= f.input :description, input_html: { class: "form-input", placeholder: "Describe your habit" } %>
+        <%= f.submit "Create", class: "habits-new-btn"%>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<!-- <%= simple_form_for @habit, data: { controller: 'flatpickr' } do |f| %>
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
@@ -8,4 +30,3 @@
       <%= f.submit class: "habits-new-btn"%>
     <% end %>
   </div>
-</div>

@@ -25,19 +25,17 @@ puts "#{second_user.first_name} is created"
 
 puts "Creating 6 Habits and assigin to first user..."
 
-first_habit = Habit.create!(title: Faker::Lorem.sentence, description: Faker::Quote.yoda, start_date: Faker::Date.forward(days: 31), end_date: Faker::Date.forward(days: 31) + 78, user: first_user)
+first_habit = Habit.create!(title: Sports.sport.title, description: Faker::Quote.yoda, start_date: Faker::Date.forward(days: 31), end_date: Faker::Date.forward(days: 31) + 78, user: first_user)
 
 5.times do
-  habit = Habit.new(title: Faker::Lorem.sentence, description: Faker::Quote.yoda, start_date: Faker::Date.forward(days: 31), end_date: Faker::Date.forward(days: 31) + 78, user: first_user)
+  habit = Habit.new(title: Sports.sport.title, description: Faker::Quote.yoda, start_date: Faker::Date.forward(days: 31), end_date: Faker::Date.forward(days: 31) + 78, user: first_user)
   habit.save!
 end
 
-
 puts "Creating 5 Milestones and assiging to first habit..."
 5.times do
-  milestone = Milestone.new(title: Faker::Lorem.sentence, description: Faker::Quote.yoda, start_time: Faker::Date.forward(days: 31), end_time: Faker::Date.forward(days: 31) + 7.1, habit: first_habit)
+  milestone = Milestone.new(title: Sports.sport.title, description: Faker::Quote.yoda, start_time: Faker::Date.forward(days: 31), end_time: Faker::Date.forward(days: 31) + 7.1, habit: first_habit)
   milestone.save!
 end
-
 
 puts "Finished!"

@@ -1,8 +1,65 @@
-.box {
-  margin: 30px;
+.habit-title {
+  margin-bottom: 15px;
+  margin-top: 12px;
 }
+.box {
+  margin: 50px;
+}
+
 .bottom {
-  margin-right: 27px;
+  // margin-right: 15px;
   display: flex;
   flex-direction: column;
+  margin-top: 75px;
+  font-size: 13px;
+  color: #3B3B3B;
+}
+
+.habit-new-title {
+  margin: 20px;
+}
+.running {
+  margin: 50px;
+  color: #5B67CA;
+  font-size: 45px;
+}
+
+.nudge {
+  font-size: 12px;
+}
+
+.down {
+  position: fixed;
+  bottom: 10px;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.form-title {
+  font-size: 18px;
+  color: #10275A;
+  margin-bottom: 10px;
+}
+
+.habits-new {
+  text-align: left;
+  font-size: 14px;
+  line-height: 23px;
+  color: #8A8BB3;
+}
+
+.form-input {
+  font-size: 16px;
+  color: #10275A;
+}
+
+.habits-new-btn {
+  width: 327px;
+  height: 56px;
+  margin: 10px;
+  font-size: 18px;
+  color: #FEFFFF;
+  background: #5B67CA;
+  box-shadow: -3px 7px 13px #F1F7FF;
+  border-radius: 14px;
 }

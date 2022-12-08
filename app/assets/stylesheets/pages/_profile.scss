@@ -13,7 +13,6 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   margin: 0px 10px 25px 25px;
-  padding-top: 3px;
   grid-gap: 15px;
 }
 
@@ -27,8 +26,12 @@
   // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
   p{
-    font-size: 13px;
-    margin-top: 10px;
+     margin-top:-5;
+     font-size: 10px
+  }
+
+  h6 {
+    margin-top: 15px;
   }
 
 }
@@ -40,6 +43,7 @@
 
 .card-milestones{
   background-color: hsl(234, 69%, 88%);
+
 }
 
 .card-perfomance{
@@ -51,10 +55,6 @@
   background-color: hsl(137, 69%, 91%);
 }
 
-// .cards-third-line{
-//   position: relative;
-// }
-
 
 .card-create-group{
   background-color: hsl(14, 77%, 90%);
@@ -63,43 +63,60 @@
   left: 30%;
 }
 
+.icons {
+  border-radius: 15%;
+  font-size: 30px;
+  color: #ffff;
+}
+
+.perfomancecolor{
+  background-color: #E77D7D;
+  position: relative;
+  width: 50%;
+  height: 45%;
+  margin-left: 35px;
+  top: 15px;
+}
+
+.crgroupcolor{
+  background-color: #F0A58E;
+  position: relative;
+  width: 50%;
+  height: 45%;
+  margin-left: 35px;
+  top: 15px;
+}
+
+.milcolour{
+  background-color: #858FE9;
+  position: relative;
+  width: 50%;
+  height: 45%;
+  margin-left: 35px;
+  top: 15px;
+}
+
+.groupcolor{
+  background-color: #81E89E;
+  position: relative;
+  width: 50%;
+  height: 45%;
+  margin-left: 35px;
+  top: 15px;
+}
+
+.habcolor{
+  background-color: #7FC9E7;
+  position: relative;
+  width: 50%;
+  height: 45%;
+  margin-left: 35px;
+  top: 15px;
+}
 
 #avatar-profile {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   box-shadow: 5px 5px 5px #ccc;
-}
-
-.icons {
-  width: 45%;
-  height: 45%;
-  border-radius: 15%;
-  margin-top: 20px;
-  margin-left: 38px;
-  font-size: 30px;
-  color: #ffff;
-  margin-top: 15px;
-}
-
-.perfomancecolor{
-  background-color: #E77D7D;
-}
-
-.crgroupcolor{
-  background-color: #F0A58E;
-}
-
-.milcolour{
-  background-color: #858FE9;
-}
-
-.groupcolor{
-  background-color: #81E89E;
-}
-
-
-
-.habcolor{
-  background-color: #7FC9E7;
 }
