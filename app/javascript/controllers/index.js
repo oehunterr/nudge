@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import DisableButtonController from "./disable_button_controller"
+application.register("disable-button", DisableButtonController)
+
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
