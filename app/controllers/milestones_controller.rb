@@ -17,7 +17,7 @@ class MilestonesController < ApplicationController
     @habit = Habit.find(params[:habit_id])
     @milestone = Milestone.new(milestone_params)
     @milestone.user = @user
-    @milestone.habit = @habit
+    # @milestone.habit = @habit
     if @milestone.save
       redirect_to habit_path(@habit_id)
     else
