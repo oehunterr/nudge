@@ -1,6 +1,20 @@
 <p> <%= "This habit starts on the #{@habit.start_date} and hopefully will be achieced by the #{@habit.end_date}" %>
-<div class="container">
+<div class="container" data-controller="disable-button">
     <h3><%= @habit.title %></h3><br>
     <h6><%= @habit.description %></h6>
     <%# <li><%= @habit.milestone %>
+
+<i class="fa-sharp fa-solid fa-plus" data-action="click->disable-button#disable">Add milestone</i>
+  <div class="container d-none"data-disable-button-target="link">
+  <div class ="form-title"></div>
+      <div class="milestone-new">
+        <%= simple_form_for [@habit, @milestone], data: { controller: 'flatpickr' } do |f| %>
+          <%= f.input :title, input_html: { class: "form-input", placeholder: "My Milestone" } %>
+          <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" }, class: "form-input", placeholder: "Start Right Now !" } %>
+          <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" }, placeholder: 'Give a goal to yourself' , id: 'end_time' } %>
+          <%= f.input :description, input_html: { class: "form-input", placeholder: "Give me some details." } %>
+          <%= f.submit "Create", class: "btn milestone-new-btn"%>
+        <% end %>
+      </div>
+    </div>
 </div>
