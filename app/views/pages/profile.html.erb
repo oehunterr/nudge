@@ -1,7 +1,7 @@
 <div class="title-top">
 <%= image_tag "avatar_img.jpg", {id:"avatar"} %>
-<h4><%= @user.first_name %></h4>
-<p><%= @user.email %></p>
+<h4><%= current_user.first_name %></h4>
+<p><%= current_user.email %></p>
 </div>
 
 <div class="container">
