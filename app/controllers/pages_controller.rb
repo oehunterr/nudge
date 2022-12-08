@@ -9,7 +9,8 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    @habit = @habit.user
-    @milestone = @milestone.user
+    @habit = @user.habits
+    @milestone = @user.milestones
+
   end
 end

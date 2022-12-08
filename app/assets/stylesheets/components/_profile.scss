@@ -1,0 +1,109 @@
+.title-top{
+  h4{
+    font-weight: bold;
+    color: #10275A;
+  }
+
+  p{
+    font-size: 10px;
+  }
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: 0px 10px 25px 25px;
+  padding-top: 3px;
+  grid-gap: 15px;
+}
+
+.cards{
+  width: 140px;
+  height: 120px;
+  border-radius: 15%;
+  border: 2px transparent;
+  color: #12175E;
+  font-weight: 400;
+  // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+  p{
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+}
+
+.card-habit{
+  background-color: hsl(197, 68%, 90%);
+}
+
+
+.card-milestones{
+  background-color: hsl(234, 69%, 88%);
+}
+
+.card-perfomance{
+  background-color:hsl(0, 69%, 95%);
+}
+
+
+.card-groups{
+  background-color: hsl(137, 69%, 91%);
+}
+
+
+// .cards-third-line{
+//   position: relative;
+// }
+
+
+.card-create-group{
+  background-color: hsl(14, 77%, 90%);
+  align-items: center;
+  position: absolute;
+  left: 30%;
+}
+
+
+#avatar {
+  width: 70px;
+  height: 7 0px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+.icons {
+  width: 45%;
+  height: 45%;
+  border-radius: 15%;
+  margin-top: 20px;
+  margin-left: 38px;
+  font-size: 30px;
+  color: #ffff;
+
+}
+
+.perfomancecolor{
+  background-color: #E77D7D;
+}
+
+.crgroupcolor{
+  background-color: #F0A58E;
+}
+
+.milcolour{
+  background-color: #858FE9;
+}
+
+.groupcolor{
+  background-color: #81E89E;
+}
+
+.icons{
+  margin-top: 15px;
+
+}
+
+.habcolor{
+  background-color: #7FC9E7;
+}
