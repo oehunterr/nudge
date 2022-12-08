@@ -12,16 +12,29 @@
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
+  <div class="container">
+      <h2 class="sign-in">Sign In</h2>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
+        <div class="form-actions">
+          <%= f.input :email,
+                      label: false,
+                      required: false,
+                      autofocus: true,
+                      input_html: { autocomplete: "email", class: "nice-class", placeholder: "Email" } %>
+          <%= f.input :password,
+                      label:false,
+                      required: false,
+                      input_html: { autocomplete: "current-password", class: "nice-class", placeholder: "Password" } %>
+        </div>
     <div class="form-actions">
       <%= f.button :submit, "Log in" %>
     </div>
   <% end %>
 </div>
 </div>
-        /<div class="forgot">
-          /<%= link_to "Forgot password?"  %>
-       /</div>
-
+        <div class="forgot">
+          <%= link_to "Forgot password?"  %>
+       </div>
 
       <div class="loginbutton">
           <%=  f.button :submit, "Sign in" %>

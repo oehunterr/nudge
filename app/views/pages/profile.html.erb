@@ -1,0 +1,48 @@
+<div class="title-top">
+<%= image_tag "avatar_img.jpg", {id:"avatar"} %>
+<h4><%= @user.first_name %></h4>
+<p><%= @user.email %></p>
+</div>
+
+<div class="container">
+  <div class="grid first-line">
+    <div class="cards card-habit">
+      <div class="icons habcolor">
+          <i class="fa-solid fa-business-time"></i>
+      </div>
+      <p><strong>Habits</strong></p>
+    </div>
+
+    <div class="cards card-milestones">
+      <div class="icons milcolour ">
+        <i class="fa-solid fa-bullseye "></i>
+      </div>
+      <p><strong>Milestones</strong></p>
+    </div>
+  </div>
+
+  <div class="grid second-line">
+    <div class="cards card-perfomance">
+      <div class="icons perfomancecolor">
+        <i class="fa-solid fa-chart-simple"></i>
+      </div>
+      <p><strong>Perfomance</strong></p>
+    </div>
+
+    <div class="cards card-groups">
+          <div class="icons groupcolor">
+            <i class="fa-solid fa-users-viewfinder"></i>
+          </div>
+      <p> <strong>Groups</strong> </p>
+    </div>
+  </div>
+
+    <div class="grid third-line">
+      <div class="cards card-create-group">
+        <div class="icons crgroupcolor">
+        <i class="fa-solid fa-user-plus icon"></i>
+        </div>
+        <p> <strong>Create Groups</strong></p>
+      </div>
+    </div>
+</div>
