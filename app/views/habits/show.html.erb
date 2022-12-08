@@ -1,6 +1,17 @@
-<p> <%= "This habit starts on the #{@habit.start_date} and hopefully will be achieced by the #{@habit.end_date}" %>
+<div class="habit-new-title">
+  <h1>Congratulations 🎉 </h1>
+</div>
 <div class="container">
-    <h3><%= @habit.title %></h3><br>
-    <h6><%= @habit.description %></h6>
-    <%# <li><%= @habit.milestone %>
+  <h6>Your journey towards living with intention 🤌 start with this habit:</h6>
+<div>
+</div>
+<div class="running">
+  <p><%= @habit.title.capitalize %>: <%= @habit.description %></p>
+</div>
+<div>
+  <p>To make sure you're sticking to your habit, create some milestones here:</p>
+  <p class="nudge">Read about nudge theory here: <%= link_to "Nudge", "https://www.imperial.ac.uk/nudgeomics/about/what-is-nudge-theory/#:~:text=Nudge%20Theory%20is%20based%20upon,chosen%20over%20another%20by%20individuals.", target: "_blank" %> 📌</p>
+</div>
+<div class="down">
+  <p><%= "By #{@habit.end_date}, this habit will be like brushing your teeth 🪥 You got this 💪"%></p>
 </div>
