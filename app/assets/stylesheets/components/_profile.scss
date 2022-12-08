@@ -51,7 +51,6 @@
   background-color: hsl(137, 69%, 91%);
 }
 
-
 // .cards-third-line{
 //   position: relative;
 // }
@@ -65,9 +64,9 @@
 }
 
 
-#avatar {
+#avatar-profile {
   width: 70px;
-  height: 7 0px;
+  height: 70px;
   border-radius: 50%;
   box-shadow: 5px 5px 5px #ccc;
 }
@@ -80,7 +79,7 @@
   margin-left: 38px;
   font-size: 30px;
   color: #ffff;
-
+  margin-top: 15px;
 }
 
 .perfomancecolor{
@@ -99,10 +98,7 @@
   background-color: #81E89E;
 }
 
-.icons{
-  margin-top: 15px;
 
-}
 
 .habcolor{
   background-color: #7FC9E7;
