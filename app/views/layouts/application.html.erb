@@ -17,11 +17,16 @@
     <link href='https://css.gg/performance.css' rel='stylesheet'>
     <link href='https://css.gg/add.css' rel='stylesheet'>
     <link href='https://css.gg/comment.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <%= render "shared/new_navbar" %>
+    <% unless params[:action] == "home" %>
+      <%= render "shared/new_navbar" %>
+    <% end %>
+    <% unless params[:action] == "home" %>
+      <%= render "shared/menu_icon" %>
+    <% end %>
     <%= yield %>
     <%= render "shared/flashes" %>
   </body>
