@@ -6,23 +6,25 @@
       <div class="row">
         <ul>
           <% if current_user.habits.length > 0 %>
-            <div>
               <% @search_results.each do |habit| %>
-              <li><%= habit.title %></li>
-              <li>habit belongs to <%= current_user.first_name %></li>
-              <% if habit.master == true %>
-              <strong> PRO </strong>
-              <% else %>
-              <strong> JUNIOR </strong>
-              <% end %>
-              <hr>
-              <li><%= habit.description %></li>
-              <li><%= habit.start_date.strftime(' %a, %d %B, %Y') %></li>
-              <li class= "m-3"><%= habit.end_date.strftime(' %a, %d %B, %Y')  %></li>
-              <li><%= link_to "view this habit", habit_path(habit.id), class: "home-btn" %></li>
-              <hr><hr>
-              <br>
+              <div class="container">
+              <div class="card card-border text-center">
+                <div class="card-header">
+                  <li><%= habit.title %></li>
+                  </div>
+                  <div class="card-body">
+                    <!--<li class= "card-title">habit belongs to <%= current_user.first_name %></li>
+                      <% if habit.master == true %>
+                      <strong class="card-text"> PRO </strong>
+                      <% else %>
+                      <strong class="card-text"> JUNIOR </strong>
+                      <% end %>
+                      <li><%= habit.start_date.strftime(' %a, %d %B, %Y') %></li>-->
+                      <li class= "m-3">Achived by: <br><%= habit.end_date.strftime(' %a, %d %B, %Y') %></li>
+                  <li class ="m-3"><%= link_to "view this habit", habit_path(habit.id), class: "home-btn m-3" %></li>
+                    </div>
             </div>
+              </div>
             <% end %>
           <% else %>
             <div class="box">
