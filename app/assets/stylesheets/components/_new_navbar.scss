@@ -4,7 +4,8 @@
   position: fixed;
   bottom: 0;
   align-items: center;
-  margin-bottom: 2%;
+  // margin-bottom: 2%;
+  padding: 2%;
   width: 100%;
   background-color: #FFFFFF;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
@@ -18,6 +19,10 @@
   i {
     color: #C6CEDD ;
   }
+}
+
+.margin-from-navbar {
+  margin-bottom: 6rem;
 }
 
 #svg-plus {
