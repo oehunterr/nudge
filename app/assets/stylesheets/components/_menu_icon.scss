@@ -1,17 +1,23 @@
 .menu-icon {
   width: 50px;
   height: 50px;
-  position: absolute;
-  top: 5px;
+  top: 10px;
   right: 5%;
+  position: absolute;
+  justify-content: center;
 }
 
 .menu {
-  text-align: center;
-  height: 30vh;
-  background-color: #5b66ca5a 0.3;
+  position: absolute;
+  display: inline;
+  height: 20vh;
+  border: 2px solid #5B67CA;
+  border-radius: 15px;
+  li {
+    list-style-type: none;
+    margin: 5px 10px;
+  }
   .menuItem {
-    text-decoration: none;
     font-size: 16px;
     color: black;
   }
