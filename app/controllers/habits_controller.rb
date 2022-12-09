@@ -7,6 +7,7 @@ class HabitsController < ApplicationController
   def show
     @habit = Habit.find(params[:id])
     @milestone = Milestone.new
+    @milestones = @habit.milestones
   end
 
   def new
