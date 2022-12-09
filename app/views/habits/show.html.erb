@@ -1,23 +1,25 @@
-<div class="habit-new-title">
-  <h1>Congratulations 🎉 </h1>
-</div>
-<div class="container" data-controller="disable-button">
-  <h6>Your journey towards living with intention 🤌 start with this habit:</h6>
-<div>
-</div>
-<div class="running">
-  <p><%= @habit.title.capitalize %>: <%= @habit.description %></p>
-</div>
-<div>
-  <p>To make sure you're sticking to your habit, create some milestones here:</p>
-  <p class="nudge">Read about nudge theory here: <%= link_to "Nudge", "https://www.imperial.ac.uk/nudgeomics/about/what-is-nudge-theory/#:~:text=Nudge%20Theory%20is%20based%20upon,chosen%20over%20another%20by%20individuals.", target: "_blank" %> 📌</p>
-</div>
-<div class="down">
-  <p><%= "By #{@habit.end_date}, this habit will be like brushing your teeth 🪥 You got this 💪"%></p>
+<div class="habits-show-page" data-controller="disable-button">
+  <div class="habit-new-title">
+    <h1>Congratulations 🎉 </h1>
+  </div>
+  <div class="container">
+    <div class="intention">
+      <h6 class="journey">Your journey towards living with intention 🤌 starts with this habit:</h6>
+    </div>
+  </div>
+  <div class="running">
+    <p><%= @habit.title.capitalize %>: <%= @habit.description %></p>
+  </div>
+  <div class="marg">
+    <p class="make-sure">To make sure you're sticking to your habit, create some milestones here:</p>
+  </div>
+  <div class="down">
+    <p><%="By this date: #{@habit.end_date}, your habit will be integreated into your life. You got this 💪"%></p>
+  </div>
 
-<i class="fa-sharp fa-solid fa-plus" data-action="click->disable-button#disable">Add milestone</i>
-  <div class="container d-none"data-disable-button-target="link">
-  <div class ="form-title"></div>
+  <i class="fa-sharp fa-solid fa-plus mb-3" data-action="click->disable-button#disable">Add milestone</i>
+  <div class="container d-none" data-disable-button-target="link">
+    <div class ="form-title"></div>
       <div class="milestone-new">
         <%= simple_form_for [@habit, @milestone], data: { controller: 'flatpickr' } do |f| %>
           <%= f.input :title, input_html: { class: "form-input", placeholder: "My Milestone" } %>
@@ -28,4 +30,5 @@
         <% end %>
       </div>
     </div>
+  </div>
 </div>
