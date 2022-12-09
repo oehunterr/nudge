@@ -16,6 +16,9 @@
   <div class="down">
     <p><%="By this date: #{@habit.end_date}, your habit will be integreated into your life. You got this 💪"%></p>
   </div>
+  <% @milestones.each do |milestone| %>
+    <li><%= milestone.title %></li>
+  <% end %>
   <i class="fa-sharp fa-solid fa-plus mb-3" data-action="click->disable-button#disable">Add milestone</i>
   <div class="container d-none" data-disable-button-target="link">
     <div class ="form-title"></div>
