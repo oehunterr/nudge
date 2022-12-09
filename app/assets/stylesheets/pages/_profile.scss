@@ -1,7 +1,9 @@
 .title-top{
+  margin-top: 50px;
   h4{
     font-weight: bold;
     color: #10275A;
+    margin-top: 10px;
   }
 
   p{
@@ -26,12 +28,12 @@
   // box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
   p{
-     margin-top:-5;
+     margin-top:-7px;
      font-size: 10px
   }
 
   h6 {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 
 }
@@ -58,9 +60,7 @@
 
 .card-create-group{
   background-color: hsl(14, 77%, 90%);
-  align-items: center;
-  position: absolute;
-  left: 30%;
+  margin-left: 85px;
 }
 
 .icons {
@@ -120,3 +120,7 @@
   border-radius: 50%;
   box-shadow: 5px 5px 5px #ccc;
 }
+
+  .all-cards{
+    padding-top: 50px;
+  }
