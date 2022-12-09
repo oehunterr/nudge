@@ -1,26 +1,20 @@
-<div class=“container”>
-  <div id=“habitcard” class=“d-flex flex-column”></div>
-    </div>
-      <h1 class=“habit-title”>Habits</h1>
-      <div class=“row”>
-        <ul>
-          <% if current_user.habits.length > 0 %>
-            <div>
-            <% @habits.each do |habit| %>
-            <li><%= habit.title %></li>
-            </div>
-            <% end %>
-          <% else %>
-            <div class=“box”>
-             <img src=“<%= image_path “no_habits.jpg”%>” class=“d-block w-100” alt=“”>
-            </div>
-            <div class=“bottom”>
-              <p> You don’t have any habits yet</p>
-              <p> Tap the plus button ꜜ to create a new habit</p>
-            </div>
-          <% end %>
-        <ul>
-      </div>
-    </div>
+<div class="container">
+  <div>
+    <h1 class=“habit-index-title”>Habits</h1>
   </div>
+  <% if current_user.habits.length > 0 %>
+    <% @habits.each do |habit| %>
+      <div class="seed-habits">
+        <p><%= habit.title %></p>
+      </div>
+    <% end %>
+  <% else %>
+    <div class=“box”>
+      <img src="<%= image_path 'no_habits.jpg'%>" class="d-block w-100">
+    </div>
+    <div class=“bottom”>
+      <p> You don't have any habits yet</p>
+      <p> Tap the plus button ꜜ to create a new habit</p>
+    </div>
+  <% end %>
 </div>
