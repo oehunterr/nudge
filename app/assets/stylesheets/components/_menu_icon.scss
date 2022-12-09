@@ -5,3 +5,14 @@
   top: 5px;
   right: 5%;
 }
+
+.menu {
+  text-align: center;
+  height: 30vh;
+  background-color: #5b66ca5a 0.3;
+  .menuItem {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+  }
+}

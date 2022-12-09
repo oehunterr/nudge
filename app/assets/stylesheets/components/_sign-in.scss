@@ -8,8 +8,10 @@ height: 100%;
   margin: 50px 40px;
   align-items: center;
 
+
   h2 {
     text-align: center;
+    margin-top: 50px;
   }
 }
 
@@ -40,9 +42,10 @@ height: 100%;
 
 .footer {
   text-align: center;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  // position: fixed;
+  // left: 0;
+  // bottom: 0;
+  margin-top: 10px;
 
   a{
     font-size: 13px;

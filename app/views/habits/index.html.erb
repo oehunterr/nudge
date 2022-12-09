@@ -1,26 +1,40 @@
-<div class=“container”>
-  <div id=“habitcard” class=“d-flex flex-column”></div>
+<div class="container">
+  <div id="habitcard" class="d-flex flex-column"></div>
     </div>
-      <h1 class=“habit-title”>Habits</h1>
-      <div class=“row”>
+      <%= render "shared/searchbar" %>
+      <h1 class="habit-title">Habits</h1>
+      <div class="row">
         <ul>
           <% if current_user.habits.length > 0 %>
             <div>
-            <% @habits.each do |habit| %>
-            <li><%= habit.title %></li>
+              <% @search_results.each do |habit| %>
+              <li><%= habit.title %></li>
+              <li>habit belongs to <%= current_user.first_name %></li>
+              <% if habit.master == true %>
+              <strong> PRO </strong>
+              <% else %>
+              <strong> JUNIOR </strong>
+              <% end %>
+              <hr>
+              <li><%= habit.description %></li>
+              <li><%= habit.start_date.strftime(' %a, %d %B, %Y') %></li>
+              <li class= "m-3"><%= habit.end_date.strftime(' %a, %d %B, %Y')  %></li>
+              <li><%= link_to "view this habit", habit_path(habit.id), class: "home-btn" %></li>
+              <hr><hr>
+              <br>
             </div>
             <% end %>
           <% else %>
-            <div class=“box”>
-             <img src=“<%= image_path “no_habits.jpg”%>” class=“d-block w-100” alt=“”>
+            <div class="box">
+              <%= image_tag "no_habits.jpg", {class: "d-block w-100"} %>
+              <p class="nudge">Read about nudge theory here: <%= link_to "Nudge", "https://www.imperial.ac.uk/nudgeomics/about/what-is-nudge-theory/#:~:text=Nudge%20Theory%20is%20based%20upon,chosen%20over%20another%20by%20individuals.", target: "_blank" %> 📌</p>
             </div>
-            <div class=“bottom”>
-              <p> You don’t have any habits yet</p>
+            <div class="bottom">
+              <p> You don't have any habits yet</p>
               <p> Tap the plus button ꜜ to create a new habit</p>
             </div>
           <% end %>
         <ul>
       </div>
-    </div>
   </div>
 </div>

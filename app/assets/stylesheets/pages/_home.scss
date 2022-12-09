@@ -12,6 +12,7 @@ body {
   border-radius: 50%;
   box-shadow: 10px 10px 5px #ccc;
   border:2px solid #fff;
+  margin-bottom: 10px;
 }
 
 .home-container {
@@ -29,7 +30,7 @@ body {
   padding-right: 20px;
   width: 400px;
   margin-top: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
 }
 
 a {
@@ -37,16 +38,28 @@ a {
 }
 
 .content-container{
-  margin-top: 20%;
+  margin: 45px;
   p {
     font-weight: 200;
     margin-top: 10px;
     color: #4d4a49;
-    text-shadow: 2px 2px 3px rgb(206, 205, 205);
+    text-shadow: 1px 1px 2px rgb(206, 205, 205);
   }
   h1 {
     color: #5B67CA;
     font-weight:900;
-    font-size: 30px;
+    font-size: 35px;
   }
+}
+.get-out {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-weight: 900;
+  font-size: 14px;
+  text-shadow: 1px 1px 1px rgb(206, 205, 205)
+}
+
+.start-home {
+  margin-top: 100px;
 }
