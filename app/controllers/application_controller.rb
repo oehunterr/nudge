@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
     if params[:query].present?
       sql_query = <<~SQL
         habits.title @@ :query
-        OR habits.id @@ :query
         OR habits.description @@ :query
         OR users.first_name @@ :query
         OR users.last_name @@ :query

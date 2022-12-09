@@ -1,9 +1,9 @@
 <div class="nav-container">
   <div class="nav-content">
-    <i class="gg-home-alt"></i>
-    <i class="gg-performance"></i>
-    <%= image_tag "plus_svg.svg", id: "svg-plus" %>
+    <%= link_to root_path do %><i class="gg-home-alt"></i><% end %>
+    <%= link_to perfomance_path do %><i class="gg-performance"></i><% end %>
+    <%= link_to new_habit_path do %><%= image_tag "plus_svg.svg", id: "svg-plus" %><% end %>
     <i class="gg-comment"></i>
-    <i class="gg-folder"></i>
+    <%= link_to dashboard_path do %><i class="gg-folder"></i><% end %>
   </div>
 </div>
