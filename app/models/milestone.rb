@@ -3,5 +3,5 @@ class Milestone < ApplicationRecord
   validates :title, :start_time, :end_time, presence: true
 
   include PgSearch::Model
-  multisearchable against: [:title, :description]
+  multisearchable against: %i[title description]
 end
