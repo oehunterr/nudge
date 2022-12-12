@@ -1,0 +1,20 @@
+<div class="container-groups">
+  <h4 class = "no-group-title">Groups.</h4>
+  <%# if current_user.groups.length > 0 %>
+    <% @groups.each do |group| %>
+    <li><%= group.name %></li>
+    <% end %>
+    <%# else %>
+    <%# <div class="text-nogroup">
+      <p> You don't have any groups yet.</p>
+      <%#= image_tag "Groupthink.png", id: "nogroup" %>
+    <%# </div> %>
+  <%# end %>
+
+  <div class="no-groups-footer">
+      <%= link_to new_group_path do %>
+          <i class="fa-light fa-plus "></i>
+          <p>New group</p>
+      <% end %>
+  </div>
+</div>
