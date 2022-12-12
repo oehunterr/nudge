@@ -22,6 +22,3 @@ class UserGroupsController < ApplicationController
     params.require(:user_group).permit(:user_id, :group_id, :creator)
   end
 end
-# create user_groups controller, action create
-# add the simple form for [@group, @user_group] # @user_grouo = UserGroup.new
-# write in the code in the create of user_grouos controller
