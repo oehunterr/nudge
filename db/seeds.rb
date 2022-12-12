@@ -26,7 +26,7 @@ end
 
 puts "Creating 5 Milestones and assiging to first habit..."
 5.times do
-  milestone = Milestone.new(title: Faker::Hobby.activity, description: Faker::Quote.yoda, start_time: Faker::Date.forward(days: 31), end_time: Faker::Date.forward(days: 31) + 7.1, habit: first_habit )
+  milestone = Milestone.new(title: Faker::Hobby.activity, description: Faker::Quote.yoda, start_time: Faker::Date.forward(days: 2), end_time: Faker::Date.forward(days: 7) + 7.1, habit: first_habit, completed: true )
   milestone.save!
 end
 

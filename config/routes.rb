@@ -11,6 +11,12 @@ Rails.application.routes.draw do
     resources :milestones, except: [:index]
   end
   resources :milestones, only: [:destroy]
+
+  resources :pages, only: [] do
+    collection do
+      get 'milestones_completion_by_habit'
+    end
+  end
   # resources :pages
   # end
   # delete "milestones/:id", to: "milestones#destroy", as: :milestone

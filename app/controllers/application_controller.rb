@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :search_habit
+  before_action :pie_chart
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
@@ -21,6 +22,19 @@ class ApplicationController < ActionController::Base
       @search_results = Habit.joins(:user).where(sql_query, query: "%#{params[:query]}%")
     else
       @search_results = Habit.all
+    end
+  end
+
+  def pie_chart
+    @milestone = current_user.milestones
+    @milestone.each do |item|
+      if item.completed?
+        time_diff = item.end_time.strftime('%d').to_i - item.start_time.strftime('%d').to_i
+        item.duration = time_diff * 24
+        item.save!
+      else
+        return 0
+      end
     end
   end
 end

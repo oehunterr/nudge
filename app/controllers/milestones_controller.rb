@@ -43,7 +43,7 @@ class MilestonesController < ApplicationController
   private
 
   def milestone_params
-    params.require(:milestone).permit(:title, :description, :start_time, :end_time, :user_id, :habit_id)
+    params.require(:milestone).permit(:title, :description, :start_time, :end_time, :user_id, :habit_id, :completed)
   end
 
   def set_habit
