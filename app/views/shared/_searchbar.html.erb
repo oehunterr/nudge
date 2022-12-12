@@ -5,7 +5,7 @@
       class: "search-bar-layout",
       placeholder: "Look for Habit",
       input_html: {
-
+      autocomplete: false,
       }
       %>
     <i class="fa-solid fa-xmark" ></i>
@@ -14,12 +14,12 @@
 
   <!--
     sample
-    <div id="habits">
-     <% @search_results.each do |item| %>
-     <h4><%= item.title %></h4>
-     <h5><%= item.description %></h5>
-     <p><%= item.start_date.strftime(' %a, %d %B, %Y') %></p>
-     <p><%= item.end_date.strftime(' %a, %d %B, %Y') %></p>
-     <% end %>
-    </div>
+  <div id="habits">
+    <% @search_results.each do |item| %>
+      <h4><%= item.title %></h4>
+      <h5><%= item.description %></h5>
+      <p><%= item.start_date.strftime(' %a, %d %B, %Y') %></p>
+      <p><%= item.end_date.strftime(' %a, %d %B, %Y') %></p>
+    <% end %>
+  </div>
   -->
