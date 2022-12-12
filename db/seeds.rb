@@ -32,4 +32,3 @@ end
 
 puts "Finished!"
 
-Group.create!(name: "LeWagon", habit_id: 1)
