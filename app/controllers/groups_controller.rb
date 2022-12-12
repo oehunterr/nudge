@@ -39,8 +39,7 @@ class GroupsController < ApplicationController
   end
 end
 
-#create private method user_group_creator[current_user]
-#user_group .new
-#change creator to true
+# create private method user_group_creator[current_user]
+# user_group.new
+# change creator to true
 # ~
-#
