@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   # delete "milestones/:id", to: "milestones#destroy", as: :milestone
 
   resources :groups do
-    resources :user_groups, only: [:create]
+    resources :user_groups, only: %i[create new]
   end
 end
 # resources :user_groups

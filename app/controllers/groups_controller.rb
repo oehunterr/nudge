@@ -9,11 +9,15 @@ class GroupsController < ApplicationController
     @habits = Habit.all.where(user_id: current_user.id)
   end
 
+  def show
+    @group = Group.find(params[:id])
+  end
+
   def create
     @group = Group.new(groups_params)
     if @group.save
       UserGroup.create(user: current_user, group: @group, creator: true)
-      redirect_to groups_path
+      redirect_to new_group_user_group_path(@group.id)
     else
       render :new
     end
@@ -38,3 +42,5 @@ end
 #create private method user_group_creator[current_user]
 #user_group .new
 #change creator to true
+# ~
+#
