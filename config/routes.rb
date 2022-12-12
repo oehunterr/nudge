@@ -14,10 +14,17 @@ Rails.application.routes.draw do
   # resources :pages
   # end
   # delete "milestones/:id", to: "milestones#destroy", as: :milestone
-end
 
-# resources :groups
+  resources :groups do
+    resources :user_groups, only: [:create]
+  end
+end
 # resources :user_groups
 # ~
 # patch "habits/:id/active", to: "habits#active_toggle", as: :active_toggle
 # index, new, create, show, edit, update, destroy
+
+# create user_groups controller, action create
+# addthe simple form for [@group, @user_group] # @user_grouo = UserGroup.new
+
+# write in the code in the create of user_grouos controller

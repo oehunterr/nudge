@@ -31,3 +31,5 @@ puts "Creating 5 Milestones and assiging to first habit..."
 end
 
 puts "Finished!"
+
+Group.create!(name: "LeWagon", habit_id: 1)
