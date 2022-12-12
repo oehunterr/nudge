@@ -23,7 +23,6 @@ class HabitsController < ApplicationController
     @habit.user_id = current_user.id
     if @habit.save
       redirect_to habit_path(@habit)
-      # try change to route back to index
     else
       render :new
     end
