@@ -20,7 +20,7 @@
                       <strong class="card-text"> JUNIOR </strong>
                       <% end %>
                       <li><%= habit.start_date.strftime(' %a, %d %B, %Y') %></li>-->
-                      <li class= "m-3">Achived by: <br><%= habit.end_date.strftime(' %a, %d %B, %Y') %></li>
+                      <li class= "m-3">Achieved by: <br><%= habit.end_date.strftime(' %a, %d %B, %Y') %></li>
                   <li class ="m-3"><%= link_to "view this habit", habit_path(habit.id), class: "home-btn m-3" %></li>
                     </div>
             </div>
