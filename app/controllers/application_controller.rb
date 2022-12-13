@@ -26,8 +26,8 @@ class ApplicationController < ActionController::Base
   end
 
   def pie_chart
-    @milestone = current_user.milestones
-    @milestone.each do |item|
+    @milestone = current_user&.milestones
+    @milestone&.each do |item|
       if item.completed?
         time_diff = item.end_time.strftime('%d').to_i - item.start_time.strftime('%d').to_i
         item.duration = time_diff * 24
