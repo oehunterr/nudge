@@ -7,6 +7,7 @@
       <div class="form-inputs">
         <%= f.input :first_name,
                     label: false,
+                    autofocus: true,
                     input_html: { class: "nice-classes", placeholder: "First name" }%>
         <%= f.input :last_name,
                     label: false,
@@ -14,7 +15,6 @@
                     input_html: { class: "nice-classes", placeholder: "Last name"  } %>
         <%= f.input :email,
                     label: false,
-                    autofocus: true,
                     input_html: { autocomplete: "email", class: "nice-classes", placeholder: "Email"  }%>
         <%= f.input :password,
                     label: false,
