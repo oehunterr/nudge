@@ -1,39 +1,61 @@
-.habit-index-title {
-  margin: 100px;
+// .habit-index-title {
+//   margin: 100px;
+// }
+
+
+// .card-border.text-center {
+  //   border: none;
+  //   background: rgba(127, 201, 231, 0.25);
+  //   margin-bottom: 25px;
+  // }
+
+  // .seed-habits {
+    //   margin-top: 30px;
+    // }
+
+.background-color-habits{
+  background-color: #FEFCF3;
 }
 
 .habit-title {
-  margin-bottom: 30px;
-  margin-top: 1rem;
-  text-align: center;
-  color: #10275A;
-  text-align: left;
-  margin-left: 15px;
+        margin-bottom: 30px;
+        margin-top: 1rem;
+        text-align: center;
+        color: #10275A;
+        text-align: left;
+        margin-left: 15px;
 }
 
-.card-border.text-center {
-  border: none;
-  background: rgba(127, 201, 231, 0.25);
-  margin-bottom: 25px;
-}
-
-.box {
-  margin: 100px !important;
-}
-
-.seed-habits {
-  margin-top: 30px;
-}
-
-.bottom {
-  // margin-right: 15px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 75px;
-  font-size: 13px;
-  color: #3B3B3B;
-}
-
-ul li {
+li {
   list-style: none;
+}
+
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr ;
+  font-size: 15px;
+  color: white;
+  grid-gap: 10px;
+  border-radius: 10%;
+  justify-items: center;
+  box-shadow: inset;
+}
+
+
+.habit-content{
+  background-color: #BCCEF8;
+  border-radius: 5%;
+  width: 300px;
+  height: 85px;
+  a{
+    color: #2C406E;
+  }
+}
+
+.habit-title-card{
+  margin-top: 20px;
+}
+
+.view-this{
+  margin-top: 5px;
 }

@@ -1,7 +1,6 @@
 <div class= "container">
   <h6>Add friends to your group!</h6>
-  <%= simple_form_for [@group, @user_group] do |f| %>
-    <%= f.input :user_id, input_html: { label: "User", placeholder: "Invite friends!" } %>
+  <%= simple_form_for [@group, @user_group] do |f| %> 
     <%= f.association :user, label_method: :email, value_method: :id %>
     <%= f.submit "Create"%>
   <% end %>
