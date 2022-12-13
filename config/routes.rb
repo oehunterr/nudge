@@ -17,6 +17,8 @@ Rails.application.routes.draw do
       get 'milestones_completion_by_habit'
     end
   end
+
+  resources :notifications,  only: %i[edit update]
   # resources :pages
   # end
   # delete "milestones/:id", to: "milestones#destroy", as: :milestone
