@@ -37,5 +37,6 @@
   </div>
   <div class="performance-container">
     <h1>Performance</h1>
+      <%= pie_chart @milestone.group(:title).sum(:duration) , suffix: " Hours", legend: false, dataset: {borderWidth: 1, spacing: 2, offset: 2, borderRadius: 10}, donut: true, colors: ["#8F99EB", "#E88B8C", "#7EC8E7"] %>
   </div>
 </div>
