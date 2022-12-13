@@ -7,22 +7,23 @@
             <% if current_user.habits.length > 0 %>
               <% @search_results.each do |habit| %>
                 <div class="habit-content">
+                  <li class= "habit-date" ><%= habit.start_date.strftime('%d %B, %Y') %></li>
                   <li class= "habit-title-card" ><%= habit.title %></li>
                   <li class = "view-this" ><%= link_to "View this habit", habit_path(habit.id) %></li>
                 </div>
               <% end %>
               <% else %>
-              <div class="no-habits">
-                <div class="#bottom">
-                    <p> You don't have any habits yet</p>
-                    <p> Tap the plus button ꜜ to create a new habit</p>
+                <div class="no-habits">
+                  <div class="#bottom">
+                      <p> You don't have any habits yet</p>
+                      <p> Tap the plus button ꜜ to create a new habit</p>
+                  </div>
+                  <div class="box">
+                    <%= image_tag "no_habits.jpg", {class: "d-block w-100"} %>
+                    <p>Read about nudge theory here: <%= link_to "Nudge", "https://www.imperial.ac.uk/nudgeomics/about/what-is-nudge-theory/#:~:text=Nudge%20Theory%20is%20based%20upon,chosen%20over%20another%20by%20individuals.", target: "_blank" %> 📌</p>
+                  </div>
                 </div>
-                <div class="box">
-                   <%= image_tag "no_habits.jpg", {class: "d-block w-100"} %>
-                  <p>Read about nudge theory here: <%= link_to "Nudge", "https://www.imperial.ac.uk/nudgeomics/about/what-is-nudge-theory/#:~:text=Nudge%20Theory%20is%20based%20upon,chosen%20over%20another%20by%20individuals.", target: "_blank" %> 📌</p>
-                </div>
-              </div>
-          <% end %>
+            <% end %>
     </div>
   </div>
 </div>
