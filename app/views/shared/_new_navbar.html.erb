@@ -4,13 +4,14 @@
     <%= link_to perfomance_path do %><i class="gg-performance"></i><% end %>
     <%= link_to new_habit_path do %><%= image_tag "plus_svg.svg", id: "svg-plus" %><% end %>
     <%= link_to groups_path do %><i class="gg-website"></i><% end %>
-    <%= link_to habits_path do %><i class="gg-folder"></i><% end %>
-    <% if current_user.unread_notifications %>
-      <%= link_to edit_notification_path(current_user.notifications.last) do %>
-        <i class="fa-solid fa-bell" id="bell-colour"></i>
+    <% if user_signed_in?  %>
+      <% if current_user.unread_notifications %>
+        <%= link_to edit_notification_path(current_user.notifications.last) do %>
+          <i class="fa-solid fa-bell" id="bell-colour"></i>
+        <% end %>
+      <% else %>
+        <i class="fa-solid fa-bell"></i>
       <% end %>
-    <% else %>
-      <i class="fa-solid fa-bell"></i>
     <% end %>
   </div>
 </div>
