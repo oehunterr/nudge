@@ -15,3 +15,6 @@ application.register("hello", HelloController)
 
 import MenuController from "./menu_controller"
 application.register("menu", MenuController)
+
+import SubmitController from "./submit_controller"
+application.register("submit", SubmitController)
