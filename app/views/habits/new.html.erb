@@ -7,25 +7,14 @@
       <p> Spend a couple of minutes thinking about ONE change you would like to make in your life & let's start with that:</p>
     </div>
   </div>
-  <div class="container ">
+  <div class="container">
     <div class="habits-new margin-from-navbar">
       <%= simple_form_for @habit, data: { controller: 'flatpickr' } do |f| %>
         <%= f.input :title, input_html: { class: "form-input", placeholder: "My Habit" } %>
         <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" }, class: "form-input", placeholder: "Begin your journey!" } %>
-        <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" }, placeholder: "The date you will be transformed" , id: 'end_time' } %>
+        <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" }, placeholder: "The date you will be transformed" } %>
         <%= f.input :description, input_html: { class: "form-input", placeholder: "Describe your habit" } %>
-        <%= f.submit "Create", class: "habits-new-btn "%>
+        <%= f.submit "Create", class: "habits-new-btn"%>
       <% end %>
     </div>
-  </div>
-
-
-
-<!-- <%= simple_form_for @habit, data: { controller: 'flatpickr' } do |f| %>
-      <%= f.input :title %>
-      <%= f.input :description %>
-      <%= f.input :start_date, as: :string, input_html: { data: { flatpickr_target: "startTime" } } %>
-      <%= f.input :end_date, as: :string, input_html: { data: { flatpickr_target: "endTime" } } %>
-      <%= f.submit class: "habits-new-btn"%>
-    <% end %>
   </div>

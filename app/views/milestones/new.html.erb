@@ -1,5 +1,5 @@
 <div class="container">
-<div class ="form-title">Add Milestone</div>
+  <div class ="form-title">Add Milestone</div>
   <div class="milestone-new">
     <%= simple_form_for [@habit, @milestone], data: { controller: 'flatpickr' } do |f| %>
       <%= f.input :title, input_html: { class: "form-input", placeholder: "My Milestone" } %>
