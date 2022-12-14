@@ -1,94 +1,89 @@
-<div>
-  <div>
-    <div class="container-new">
-      <div class="habits-show-page padding-from-navbar" data-controller="disable-button">
-        <div class="habit-new-title">
-          <% if @habit.milestones.size == 0 %>
-            <h1>Congratulations 🎉 </h1>
-        </div>
-      <div class="container">
-        <div class="intention">
-          <h6 class="journey">Your journey towards living with intention 🤌 starts with this habit:</h6>
-      </div>
-      <div class="habit-box">
-        <div class="habit-show-master-wrap">
-          <div class ="habit-show-title"><%= @habit.title.capitalize %></div>
-        </div>
-      </div>
-        <hr>
-          <div class ="habit-show-des"><%= @habit.description %></div>
-            <div class="habit-show-box">
-              <div class="habit-show-box-time">
-                <p>Est. Start</p>
-                  <%= @habit.start_date.strftime('%a, %d %b %y') %>
-                </div>
-              <div class="habit-show-box-time">
-            <p>Est. End</p>
-            <%= @habit.end_date.strftime('%a, %d %b %y') %>
-          </div>
-        </div>
-        <div class="marg">
-          <p class="habit-show-list">To make sure you're sticking to your habit, create some milestones here:</p>
-        </div>
-          </div>
-        <% else %>
-        <div class="habit-new-title">
-          <span class="habit-show-top">Habit🧗</span>
-        </div>
-          <div class="habit-box">
-          <div class="habit-show-master-wrap">
-            <div class ="habit-show-title"><%= @habit.title.capitalize %></div>
-            <% if @habit.master == true %>
-              <div class ="master-tag"> Master </div>
-            <% end %>
-          </div>
-            <hr>
-            <div class ="habit-show-des"><%= @habit.description %></div>
-            <div class="habit-show-box">
-            <div class="habit-show-box-time">
-            <p>Est. Start</p>
-            <%= @habit.start_date.strftime('%a, %d %b %y') %>
-            </div>
-            <div class="habit-show-box-time">
-            <p>Est. End</p>
-            <%= @habit.end_date.strftime('%a, %d %b %y') %>
-            </div>
-            </div>
-          </div>
-          <div class="marg">
-            <p class="habit-show-list">Your Milestones:</p>
-            <% @milestones.each do |milestone| %>
-            <li><%= milestone.title %></li><hr>
-            <% end %>
-          </div>
-        <% end %>
+<div class="container-new">
+  <div class="habits-show-page padding-from-navbar" data-controller="disable-button">
+    <div class="habit-new-title">
       <% if @habit.milestones.size == 0 %>
-        <div class="no-groups-footer">
-            <p>Add your first milestone</p>
-          <i class="fa-light fa-plus" data-action="click->disable-button#disable"></i>
-        </div>
-        <% else %>
-        <div class="no-groups-footer">
-            <p>Add more milestones</p>
-            <i class="fa-light fa-plus" data-action="click->disable-button#disable"></i>
-        </div>
-      <% end %>
-        <div class="container d-none" data-disable-button-target="link">
-          <div class ="form-title"></div>
-            <div class="milestone-new">
-              <%= simple_form_for [@habit, @milestone], data: { controller: 'flatpickr' } do |f| %>
-                <%= f.input :title, input_html: { class: "form-input", placeholder: "My Milestone" } %>
-                <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" }, class: "form-input", placeholder: "Start Right Now !" } %>
-                <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" }, placeholder: 'Give a goal to yourself' , id: 'end_time' } %>
-                <%= f.input :description, input_html: { class: "form-input", placeholder: "Give me some details." } %>
-                <%= f.submit "Create", class: "btn milestone-new-btn margin-from-navbar" %>
-              <% end %>
-            </div>
-          </div>
-        </div>
-      </div>
+        <h1>Congratulations 🎉 </h1>
     </div>
+  <div class="container">
+    <div class="intention">
+      <h6 class="journey">Your journey towards living with intention 🤌 starts with this habit:</h6>
+  </div>
+  <div class="habit-box">
+    <div class="habit-show-master-wrap">
+      <div class ="habit-show-title"><%= @habit.title.capitalize %></div>
     </div>
   </div>
-
+    <hr>
+      <div class ="habit-show-des"><%= @habit.description %></div>
+        <div class="habit-show-box">
+          <div class="habit-show-box-time">
+            <p>Est. Start</p>
+              <%= @habit.start_date.strftime('%a, %d %b %y') %>
+            </div>
+          <div class="habit-show-box-time">
+        <p>Est. End</p>
+        <%= @habit.end_date.strftime('%a, %d %b %y') %>
+      </div>
+    </div>
+    <div class="marg">
+      <p class="habit-show-list">To make sure you're sticking to your habit, create some milestones here:</p>
+    </div>
+      </div>
+    <% else %>
+    <div class="habit-new-title">
+      <span class="habit-show-top">Habit🧗</span>
+    </div>
+      <div class="habit-box">
+      <div class="habit-show-master-wrap">
+        <div class ="habit-show-title"><%= @habit.title.capitalize %></div>
+        <% if @habit.master == true %>
+          <div class ="master-tag"> Master </div>
+        <% end %>
+      </div>
+        <hr>
+        <div class ="habit-show-des"><%= @habit.description %></div>
+        <div class="habit-show-box">
+        <div class="habit-show-box-time">
+        <p>Est. Start</p>
+        <%= @habit.start_date.strftime('%a, %d %b %y') %>
+        </div>
+        <div class="habit-show-box-time">
+        <p>Est. End</p>
+        <%= @habit.end_date.strftime('%a, %d %b %y') %>
+        </div>
+        </div>
+      </div>
+      <div class="marg">
+        <p class="habit-show-list">Your Milestones:</p>
+        <% @milestones.each do |milestone| %>
+          <%= simple_form_for [@habit, milestone], method: :patch, data: {submit_target: "form", controller: 'submit', action:"change->submit#submitForm", sumbit_target: "checkboxForm"  } do |f| %>
+            <%= f.input :completed, :as => :boolean, label: "#{milestone.title}" ", due in " "#{milestone.end_time.strftime('%d').to_i - Date.today.strftime('%d').to_i}"" days", input_html: {class: "checkbox", data: {sumbit_target: "checkbox"}} %>
+            <hr>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  <% if @habit.milestones.size == 0 %>
+    <div class="no-groups-footer">
+        <p>Add your first milestone</p>
+      <i class="fa-light fa-plus" data-action="click->disable-button#disable"></i>
+    </div>
+    <% else %>
+    <div class="no-groups-footer">
+        <p>Add more milestones</p>
+        <i class="fa-light fa-plus" data-action="click->disable-button#disable"></i>
+    </div>
+  <% end %>
+    <div class="container d-none" data-disable-button-target="link">
+      <div class ="form-title"></div>
+        <div class="milestone-new">
+          <%= simple_form_for [@habit, @milestone], data: { controller: 'flatpickr' } do |f| %>
+            <%= f.input :title, input_html: { class: "form-input", placeholder: "My Milestone" } %>
+            <%= f.input :start_time, as: :string, input_html: { data: { flatpickr_target: "startTime" }, class: "form-input", placeholder: "Start Right Now !" } %>
+            <%= f.input :end_time, as: :string, input_html: { data: { flatpickr_target: "endTime" }, placeholder: 'Give a goal to yourself' , id: 'end_time' } %>
+            <%= f.input :description, input_html: { class: "form-input", placeholder: "Give me some details." } %>
+            <%= f.submit "Create✍️", class: "btn milestone-new-btn margin-from-navbar" %>
+          <% end %>
+        </div>
+  </div>
 </div>

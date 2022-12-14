@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'users/registrations' }
   root to: "pages#home"
   get "profile", to: "pages#profile"
   get "perfomance", to: "pages#perfomance"
@@ -18,21 +18,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :notifications,  only: %i[edit update]
-  # resources :pages
-  # end
-  # delete "milestones/:id", to: "milestones#destroy", as: :milestone
+  # resources :users, only: %i[update]
+
+  resources :notifications, only: %i[edit update]
 
   resources :groups do
     resources :user_groups, only: %i[create new]
   end
 end
-# resources :user_groups
-# ~
-# patch "habits/:id/active", to: "habits#active_toggle", as: :active_toggle
-# index, new, create, show, edit, update, destroy
-
-# create user_groups controller, action create
-# addthe simple form for [@group, @user_group] # @user_grouo = UserGroup.new
-
-# write in the code in the create of user_grouos controller
