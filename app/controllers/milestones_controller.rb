@@ -28,8 +28,11 @@ class MilestonesController < ApplicationController
   end
 
   def update
+    puts milestone_params
+    @milestone = Milestone.find(params[:id])
     if @milestone.update(milestone_params)
-      redirect_to milestone_path(@milestone)
+      # redirect_to milestone_path(@milestone)
+      render json:{}
     else
       render :edit
     end

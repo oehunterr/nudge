@@ -1,4 +1,4 @@
-.container-new {
+w.container-new {
   min-height: 100vh;
 }
 
@@ -31,7 +31,7 @@
 
 .habit-show-top {
   font-size: 18px;
-  color: #10275A;
+  color: #10275a;
 }
 
 .habit-box {
@@ -41,13 +41,14 @@
 
 .habit-show-title {
   font-size: 20px;
-  color: #10275A;
+  color: #10275a;
 }
 
 .habit-show-des {
   font-size: 14px;
-  color: #2E426E;
+  color: #2e426e;
   text-align: left;
+  margin: 15px 0;
 }
 
 .habit-show-box {
@@ -58,14 +59,19 @@
 }
 
 .habit-show-box-time {
-  &> p{
+  & > p {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.75);
   }
   width: 100%;
   position: relative;
-  background: linear-gradient(257.66deg, rgba(254, 157, 157,0.68), #E77D7D 113.59%);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background: linear-gradient(
+    257.66deg,
+    rgba(254, 157, 157, 0.68),
+    #e77d7d 113.59%
+  );
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 14px;
   font-size: 14px;
   color: white;
@@ -73,27 +79,41 @@
   padding: 15px 20px;
 }
 
-
 .marg {
-  &> li {
+  & > li {
     list-style: none;
     font-size: 16px;
-    color: #2E426E;
+    color: #2e426e;
     line-height: 1.5;
   }
-  &> hr {
-    /* margin: 1rem 0; */
-    color: inherit;
-    border: 0;
-    border-top: 1px dashed;
-    opacity: 0.25;
-  }
-  .habit-show-list{
+  .habit-show-list {
     text-align: left;
     font-size: 14px;
-    color: #10275A;
+    color: #10275a;
+    margin: 15px 0;
   }
   margin-left: 5px;
   margin-bottom: 15px;
   text-align: left;
+}
+
+form {
+  & > hr {
+    color: inherit;
+    border: 0;
+    border-top: 2px dashed;
+    opacity: 0.25;
+  }
+}
+
+.form-check{
+  & > .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
+    color: #1EDD88;
+    text-decoration: line-through 1px solid red;
+  }
+
+  & > label {
+    font-size: 14px;
+    color: #2e426e
+  }
 }
