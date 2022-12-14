@@ -31,7 +31,7 @@
 .group-content {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   border-radius: 15px;
   margin-top: 20px;
   width: 350px;
@@ -39,7 +39,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   li {
     list-style: none;
-    font-size: 14px;
+    font-size: 16px;
 
   }
   #avatarG {
@@ -66,23 +66,18 @@
   }
 }
 
-.delete-btn {
+.gg-trash {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 25px;
-  font-size: 14px;
-  color: #FEFFFF;
-  background-color: rgba($color: #ff0000, $alpha: 0.4);
+  font-size: 20px;
+  color: #d820209a;
   border: none;
-  border-radius: 50px;
+  margin-right: 10px;
 }
 
 .create-groups{
   margin-top: 80px;
 
-  h6{
+  h1{
     margin-bottom: 50px;
   }
 
@@ -104,4 +99,13 @@
     color: #5B67CA;
     margin-top: -15px;
   }
+}
+
+.title-new-groups{
+  margin-bottom: 15px;
+  margin-top: 35px;
+  color: #10275A;
+  text-align: left;
+  margin-left: 15px;
+  text-align: center;
 }
