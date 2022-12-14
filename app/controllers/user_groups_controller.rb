@@ -1,13 +1,12 @@
 class UserGroupsController < ApplicationController
   def create
     @group = Group.find(params[:group_id])
-    @user_group = UserGroup.new(user_group_params)
-    @user_group.group = @group
-    if @user_group.save
-      redirect_to groups_path
-    else
-      render :new
+    @users = User.where(id: params[:user_group][:user_id])
+    @users.each do |user|
+      user_group = UserGroup.new(user_id: user.id, group_id: @group.id)
+      user_group.save
     end
+    redirect_to groups_path
   end
 
   def new
