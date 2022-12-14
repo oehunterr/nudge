@@ -1,42 +1,30 @@
-<div class="container">
-  <div id="habitcard" class="d-flex flex-column"></div>
-    </div>
-      <%= render "shared/searchbar" %>
-      <h1 class="habit-title">Habits</h1>
-      <div class="row">
-        <ul>
-          <% if current_user.habits.length > 0 %>
+<body class="background-color-habits">
+<div class="container-page">
+  <%= render "shared/searchbar" %>
+  <h1 class="habit-title">Habits</h1>
+  <div class="container">
+    <div class="container-cards">
+            <% if current_user.habits.length > 0 %>
               <% @search_results.each do |habit| %>
-              <div class="container">
-              <div class="card card-border text-center">
-                <div class="card-header">
-                  <li><%= habit.title %></li>
+                <div class="habit-content">
+                  <li class= "habit-date" ><%= habit.start_date.strftime('%d %B, %Y') %></li>
+                  <li class= "habit-title-card" ><%= habit.title %></li>
+                  <%# <li class = "view-this" ><%= link_to "View this habit", habit_path(habit.id)</li> %>
+                </div>
+              <% end %>
+              <% else %>
+                <div class="no-habits">
+                  <div class="#bottom">
+                      <p> You don't have any habits yet</p>
+                      <p> Tap the plus button ꜜ to create a new habit</p>
                   </div>
-                  <div class="card-body">
-                    <!--<li class= "card-title">habit belongs to <%= current_user.first_name %></li>
-                      <% if habit.master == true %>
-                      <strong class="card-text"> PRO </strong>
-                      <% else %>
-                      <strong class="card-text"> JUNIOR </strong>
-                      <% end %>
-                      <li><%= habit.start_date.strftime(' %a, %d %B, %Y') %></li>-->
-                      <li class= "m-3">Achieved by: <br><%= habit.end_date.strftime(' %a, %d %B, %Y') %></li>
-                  <li class ="m-3"><%= link_to "view this habit", habit_path(habit.id), class: "home-btn m-3" %></li>
-                    </div>
-            </div>
-              </div>
+                  <div class="box">
+                    <%= image_tag "no_habits.jpg", {class: "d-block w-100"} %>
+                    <p>Read about nudge theory here: <%= link_to "Nudge", "https://www.imperial.ac.uk/nudgeomics/about/what-is-nudge-theory/#:~:text=Nudge%20Theory%20is%20based%20upon,chosen%20over%20another%20by%20individuals.", target: "_blank" %> 📌</p>
+                  </div>
+                </div>
             <% end %>
-          <% else %>
-            <div class="box">
-              <%= image_tag "no_habits.jpg", {class: "d-block w-100"} %>
-              <p class="nudge">Read about nudge theory here: <%= link_to "Nudge", "https://www.imperial.ac.uk/nudgeomics/about/what-is-nudge-theory/#:~:text=Nudge%20Theory%20is%20based%20upon,chosen%20over%20another%20by%20individuals.", target: "_blank" %> 📌</p>
-            </div>
-            <div class="bottom">
-              <p> You don't have any habits yet</p>
-              <p> Tap the plus button ꜜ to create a new habit</p>
-            </div>
-          <% end %>
-        <ul>
-      </div>
+    </div>
   </div>
 </div>
+</body>
