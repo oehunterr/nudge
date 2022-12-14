@@ -22,9 +22,9 @@
   overflow-y: scroll
 }
 
-// .container-page {
-//   padding-bottom: 80px;
-// }
+.container-page {
+  padding-bottom: 80px;
+}
 
 .habit-title {
         margin-bottom: 15px;
@@ -86,11 +86,9 @@
 }
 
 .habit-date{
-  display:flex;
-  align-items: left;
-  margin: 10px 0 0 10px;
+  margin: 5px 12px;
   font-size: 9px;
-  text-align: left;
+  text-align: right;
   color: #2C406E;
   font-weight: 800;
 }

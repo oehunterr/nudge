@@ -9,6 +9,8 @@
     <%= csp_meta_tag %>
     <%= render 'shared/ios_pwa_links' %>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <%# <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
@@ -23,11 +25,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
      <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"> %>
+    <%# <link rel="manifest" href="/manifest.json"> %>
+    <link rel="stylesheet" href="https://ga.jspm.io/npm:flatpickr@4.6.13/dist/flatpickr.min.css">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link href='https://css.gg/arrow-right.css' rel='stylesheet'>
     <link href='https://css.gg/folder.css' rel='stylesheet'>
     <link href='https://css.gg/flag.css' rel='stylesheet'>
@@ -39,6 +47,7 @@
     <link href='https://css.gg/comment.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://css.gg/website.css' rel='stylesheet'>
+    <link href='https://css.gg/trash.css' rel='stylesheet'>
   </head>
 
   <body>

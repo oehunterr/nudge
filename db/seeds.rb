@@ -14,6 +14,7 @@ first_user = User.create!(email: "jones_wong@icloud.com", password: "jones_wong@
 second_user = User.create!(email: "test@test.com", password: "test@test.com", first_name: "Steve", last_name: "tester", age: 25 )
 puts "#{first_user.first_name} is created"
 puts "#{second_user.first_name} is created"
+
 # puts "Creating 4 Habits and assigin to first user..."
 # Habit.create!(title: "Coding & Programming", description: Faker::Quote.yoda, start_date: Faker::Date.forward(days: 31), end_date: Faker::Date.forward(days: 31) + 78, user: first_user, master: true )
 habit6 = Habit.create!(title: "Coding-Rails", description: "Building a rails application" , start_date: DateTime.parse('20150823 12: 44: 05'), end_date: DateTime.parse('20150910 12: 44: 05'), user: first_user, master: false )

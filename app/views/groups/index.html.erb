@@ -1,4 +1,4 @@
-<div class="container">
+<div class="group-container">
   <div class="top-content">
     <h1>My Groups</h1>
     <%= link_to profile_path do %><%= image_tag "avatar_img.jpg", id: "avatarG" %><% end %>
@@ -9,9 +9,10 @@
       <div class="group-content">
         <%= image_tag "avatar_img.jpg", id: "avatarG" %>
         <li><%= group.name %></li>
-        <button class="delete-btn">
-         <%= link_to "Delete", group, data:{turbo_method: :delete} %>
-        </button>
+         <%= link_to group, data:{turbo_method: :delete} do %>
+          <i class="gg-trash">
+          </i>
+        <% end %>
       </div>
     </div>
     <% end %>

@@ -1,7 +1,14 @@
 <div class= "container">
-  <h6>Add friends to your group!</h6>
+  <h1 class = "title-addfriends">Add friends to your group!</h1>
+  <%= image_tag "addfriendjpg.jpg", class: "add-friend-img" %>
   <%= simple_form_for [@group, @user_group] do |f| %>
-    <%= f.association :user, label_method: :first_name, placeholder: "Select a Friend", value_method: :id %>
-    <%= f.submit "Create"%>
+    <%= f.association :user,
+      legend_tag: false,
+      as: :check_boxes,
+      input_html: { class: "tag-selector" },
+      item_wrapper_class: "tag-item",
+      label_method: :first_name, value_method: :id %>
+    <%= f.submit "Add friends", class: "btn add-group-new-btn" %>
   <% end %>
 </div>
+
