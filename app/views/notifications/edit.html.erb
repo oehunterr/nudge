@@ -19,7 +19,7 @@
 
 <%= simple_form_for(@notification) do |f| %>
   <div class="to-the-left">
-      <%= f.input :answer, label: false, as: :radio_buttons, collection: [['<30m', '0.5', {class: "button"}], ['~ 1hr', '1', { class: "button" }], ['~ 2hr', '2', { class: "button" }], ['~ 3hr', '3', { class: "button" }], ['~4hr😬', '4', { class: "button" }]] %>
+      <%= f.input :answer, label: false, as: :radio_buttons, collection: [['<1hr', '1', { class: "button" }], ['<2hr', '2', { class: "button" }], ['<3hr', '3', { class: "button" }], ['<4hr', '4', { class: "button" }]] %>
   </div>
   <%= f.button :submit, "Submit", :class => "btn-colour" %>
 <% end %>

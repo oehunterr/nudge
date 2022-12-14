@@ -1,0 +1,17 @@
+{
+  "background_color": "white",
+  "description": "Nudge is an app that uses Nudge theory and knowledge of the dopamine reward pathway to pull us away from social media and push us into rewarding habits in the real world",
+  "display": "fullscreen",
+  "name": "Nudge",
+  "icons": [
+    <% files = Dir.entries(Rails.root.join("app/assets/images/icons/")).select {|f| !File.directory? f} %>
+    <% files.each_with_index do |file, index| %>
+      <% match = file.match(/.+-(?<size>\d{2,3}x\d{2,3}).png/) %>
+      {
+        "src": "<%= image_path "icons/#{file}" %>",
+        "sizes": "<%= match && match[:size] %>",
+        "type": "image/png"
+      }<%= "," unless (files.size - 1) == index %>
+    <% end %>
+  ]
+}
