@@ -29,8 +29,17 @@ class MilestonesController < ApplicationController
 
   def update
     @milestone = Milestone.find(params[:id])
+    @habit = @milestone.habit
+    is_habit_completed = false
     if @milestone.update(milestone_params)
-      render json: {}
+      completed_milestone = @habit.milestones.select {|milestone| milestone.completed}
+      if completed_milestone.length == @habit.milestones.length
+        @habit.update(master: true)
+        is_habit_completed = true
+      else
+        @habit.update(master: false)
+      end
+      render json: { is_habit_completed: is_habit_completed }
     else
       render :edit
     end

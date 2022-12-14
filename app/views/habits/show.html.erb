@@ -1,6 +1,6 @@
 <div class="container-new">
   <div class="habits-show-page padding-from-navbar" data-controller="disable-button">
-    <div class="habit-new-title">
+    <div class="habit-new-title" data-controller="submit">
       <% if @habit.milestones.size == 0 %>
         <h1>Congratulations 🎉 </h1>
     </div>
@@ -36,9 +36,7 @@
       <div class="habit-box">
       <div class="habit-show-master-wrap">
         <div class ="habit-show-title"><%= @habit.title.capitalize %></div>
-        <% if @habit.master == true %>
-          <div class ="master-tag"> Master </div>
-        <% end %>
+          <div class ="master-tag <%= "d-none" if !@habit.master %> " data-submit-target="tag"> Master </div>
       </div>
         <hr>
         <div class ="habit-show-des"><%= @habit.description %></div>
@@ -56,8 +54,8 @@
       <div class="marg">
         <p class="habit-show-list">Your Milestones:</p>
         <% @milestones.each do |milestone| %>
-          <%= simple_form_for [@habit, milestone], method: :patch, data: {submit_target: "form", controller: 'submit', action:"change->submit#submitForm", sumbit_target: "checkboxForm"  } do |f| %>
-            <%= f.input :completed, :as => :boolean, label: "#{milestone.title}" ", due in " "#{milestone.end_time.strftime('%d').to_i - Date.today.strftime('%d').to_i}"" days", input_html: {class: "checkbox", data: {sumbit_target: "checkbox"}} %>
+          <%= simple_form_for [@habit, milestone], method: :patch, data: {submit_target: "form", action:"change->submit#submitForm" } do |f| %>
+            <%= f.input :completed, :as => :boolean, label: "#{milestone.title}" ", due in " "#{milestone.end_time.strftime('%d').to_i - Date.today.strftime('%d').to_i}"" days", input_html: {class: "checkbox", data: {submit_target: "checkbox"}} %>
             <hr>
           <% end %>
         <% end %>
