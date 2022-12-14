@@ -21,13 +21,10 @@
   </head>
 
   <body>
+    <%= yield %>
     <% unless params[:action] == "home" %>
       <%= render "shared/new_navbar" %>
     <% end %>
-    <% unless params[:action] == "home" %>
-      <%= render "shared/menu_icon" %>
-    <% end %>
-    <%= yield %>
     <%= render "shared/flashes" %>
   </body>
 </html>

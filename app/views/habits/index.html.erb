@@ -9,7 +9,7 @@
                 <div class="habit-content">
                   <li class= "habit-date" ><%= habit.start_date.strftime('%d %B, %Y') %></li>
                   <li class= "habit-title-card" ><%= habit.title %></li>
-                  <li class = "view-this" ><%= link_to "View this habit", habit_path(habit.id) %></li>
+                  <%# <li class = "view-this" ><%= link_to "View this habit", habit_path(habit.id)</li> %>
                 </div>
               <% end %>
               <% else %>
