@@ -17,9 +17,19 @@
 //   background-color: #FEFCF3;
 // }
 
+.overflow-container{
+  height: 92vh;
+  overflow-y: scroll
+}
+
+// .container-page {
+//   padding-bottom: 80px;
+// }
+
 .habit-title {
         margin-bottom: 15px;
         margin-top: 1rem;
+        padding-top: 80px;
 
         color: #10275A;
         text-align: left;
@@ -36,8 +46,7 @@
   grid-template-columns: 1fr ;
   font-size: 15px;
   color: white;
-  padding: 15px;
-  margin: -5px;
+  // margin: -5px;
   grid-gap: 17px;
   border-radius: 15px;
   justify-items: center;
@@ -51,11 +60,13 @@
  // background: linear-gradient(184deg, #8F99EB 20%, #f4f4f4);
   background: linear-gradient(2deg, #8F99EB 0%, #8F99EB);
   border-radius: 15px;
-  width: 100%;
+  width: 95%;
   height: 65px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   a{
-    color: #2C406E;
+    color: whitesmoke;
+    display: block;
+    padding: 1px;
   }
 }
 
