@@ -28,11 +28,18 @@ class MilestonesController < ApplicationController
   end
 
   def update
-    puts milestone_params
     @milestone = Milestone.find(params[:id])
+    @habit = @milestone.habit
+    is_habit_completed = false
     if @milestone.update(milestone_params)
-      # redirect_to milestone_path(@milestone)
-      render json:{}
+      completed_milestone = @habit.milestones.select {|milestone| milestone.completed}
+      if completed_milestone.length == @habit.milestones.length
+        @habit.update(master: true)
+        is_habit_completed = true
+      else
+        @habit.update(master: false)
+      end
+      render json: { is_habit_completed: is_habit_completed }
     else
       render :edit
     end
@@ -53,11 +60,3 @@ class MilestonesController < ApplicationController
     @habit = Habit.find(params[:habit_id])
   end
 end
-
-# create a model called Notification
-# a user:references
-# chrone job - define a task similar to our user:update_all
-# whcih generates a Notification.new(user: user, read: false, answer: 2h) for every user
-# in the navbar, we display a badge when the user has an unread notification
-# when the user clicks on the notification, we get to the edit of the notification where we save his answer
-# retirieve everyday's screen time by doing user.notificaitons.each {|not| sum += not.answer}/user.notifications.size

@@ -1,24 +1,78 @@
-.no-group-title {
-text-align: left;
-margin-top: 89px;
-margin-left: 37px;
-color: #10275A;
-font-weight: bolder;
+.top-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C6CEDD;
+  #avatarG {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    right: 0;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #ccc;
+  }
+  h1 {
+    margin-left: 10px;
+    color: #12175E;
+    font-weight:900;
+    font-size: 30px;
+  }
 }
 
+.container-groups {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 350px;
+  height: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  li {
+    list-style: none;
+    font-size: 16px;
+
+  }
+  #avatarG {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #ccc;
+  }
+}
+
+
 #nogroup{
+  margin: 20px;
   width: 100%;
 }
 
 .text-nogroup{
   margin: 20px ;
-  font-size: 15px;
   p{
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+    color: #76787bb6;
+    font-size: 16px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 }
 
+.gg-trash {
+  display: flex;
+  font-size: 20px;
+  color: #d820209a;
+  border: none;
+  margin-right: 10px;
+}
 
 .create-groups{
   margin-top: 80px;
@@ -36,12 +90,10 @@ font-weight: bolder;
   align-items: flex-end;
   flex-direction: column-reverse;
   margin-right: 20px;
-
   a {
     color: #5B67CA;
     font-weight: 300;
   }
-
   p{
     font-size: 15px;
     color: #5B67CA;

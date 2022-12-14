@@ -3,23 +3,33 @@ body {
   height: 100vh;
 }
 
-#avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: absolute;
-  right: 5%;
-  box-shadow: 5px 5px 5px #ccc;
-}
-
-.dashboard-container {
+.dash-container {
   padding-bottom: 80px;
 }
 
+.dashboard-container {
+  padding-bottom: 20px;
+}
+
 .dashboard-top-container {
-  margin-top: 25%;
-  margin-left: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #C6CEDD;
+  #avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    right: 0;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #ccc;
+  }
   h1 {
+    margin-top: 20px;
+    margin-left: 10px;
     text-align: left;
     color: #12175E;
     font-weight:900;
@@ -28,16 +38,16 @@ body {
   p {
     text-align: left;
     font-weight: 200;
-    margin-top: 5px;
+    margin-left: 10px;
     color: #4d4a49;
     text-shadow: 2px 2px 3px rgb(206, 205, 205);
   }
 }
 
 .dashboard-habit-container {
-  margin-top: 40px;
+  margin-top: 20px;
   h1 {
-    margin-left: 5%;
+    margin-left: 10px;
     text-align: left;
     color: #12175E;
     font-weight:900;
@@ -51,9 +61,9 @@ body {
 
   .on-going-btn {
     width: 140px;
-    height: 120px;
+    height: 100px;
     background: linear-gradient(#81e89e9b, #5bbf77);
-    border-radius: 15%;
+    border-radius: 15px;
     border: 2px transparent;
     color: #12175E;
     font-weight: 400;
@@ -63,7 +73,7 @@ body {
 
   .milestones-btn {
     width: 140px;
-    height: 120px;
+    height: 100px;
     background: linear-gradient(#7d88e7ca, #5d66bf);
     border-radius: 15%;
     border: 2px transparent;
@@ -76,6 +86,7 @@ body {
 
 .btn-content-top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-left: 10px;
   margin-right: 5px;
@@ -88,7 +99,7 @@ body {
 }
 
 .btn-content-bot {
-  margin-top: 20px;
+  margin-top: 10px;
 
   p {
     font-size: 12px;
@@ -101,12 +112,16 @@ body {
 }
 
 .performance-container {
-  margin-top: 20px;
-  h1 {
-    margin-left: 5%;
-    text-align: left;
-    color: #12175E;
-    font-weight:900;
-    font-size: 30px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.performance-title {
+  text-align: left;
+  margin-left: 10px;
+  color: #12175E;
+  font-weight:900;
+  font-size: 30px;
+
 }
