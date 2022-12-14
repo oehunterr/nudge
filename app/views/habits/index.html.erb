@@ -1,18 +1,16 @@
-<body class="background-color-habits">
 <div class="container-page">
   <%= render "shared/searchbar" %>
-  <h1 class="habit-title">Habits</h1>
-  <div class="container">
+  <div class="container overflow-container">
+    <h1 class="habit-title">Habits</h1>
     <div class="container-cards">
             <% if current_user.habits.length > 0 %>
               <% @search_results.each do |habit| %>
                 <div class="habit-content">
                   <li class= "habit-date" ><%= habit.start_date.strftime('%d %B, %Y') %></li>
-                  <!--<li class= "habit-title-card" ><%= habit.title %></li>-->
-                  <li class = "habit-title-card" ><%= link_to "#{habit.title}", habit_path(habit.id)%></li>
+                  <li class= "habit-title-card"><%= link_to habit.title, habit_path(habit.id) %></li>
                 </div>
               <% end %>
-              <% else %>
+            <% else %>
                 <div class="no-habits">
                   <div class="#bottom">
                       <p> You don't have any habits yet</p>
@@ -27,4 +25,3 @@
     </div>
   </div>
 </div>
-</body>
