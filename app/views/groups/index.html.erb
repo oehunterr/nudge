@@ -1,20 +1,32 @@
-<div class="container-groups">
-  <h4 class = "no-group-title">Groups.</h4>
-  <%# if current_user.groups.length > 0 %>
+<div class="container">
+  <div class="top-content">
+    <h1>My Groups</h1>
+    <%= link_to profile_path do %><%= image_tag "avatar_img.jpg", id: "avatarG" %><% end %>
+  </div>
+  <% if current_user.groups.length > 0 %>
     <% @groups.each do |group| %>
-    <li><%= group.name %></li>
+    <div class="container-groups">
+      <div class="group-content">
+        <%= image_tag "avatar_img.jpg", id: "avatarG" %>
+        <li><%= group.name %></li>
+        <button class="delete-btn">
+         <%= link_to "Delete", group, data:{turbo_method: :delete} %>
+        </button>
+      </div>
+    </div>
     <% end %>
-    <%# else %>
-    <%# <div class="text-nogroup">
-      <p> You don't have any groups yet.</p>
-      <%#= image_tag "Groupthink.png", id: "nogroup" %>
-    <%# </div> %>
-  <%# end %>
+    <% else %>
+    <div class="text-nogroup">
+      <%= image_tag "Groupthink.png", id: "nogroup" %>
+      <p> No groups</p>
+      <p>Create a new Group ↘️</p>
+    </div>
+  <% end %>
 
   <div class="no-groups-footer">
-      <%= link_to new_group_path do %>
-          <i class="fa-light fa-plus "></i>
-          <p>New group</p>
-      <% end %>
+    <%= link_to new_group_path do %>
+      <i class="fa-light fa-plus "></i>
+      <p>New group</p>
+    <% end %>
   </div>
 </div>
