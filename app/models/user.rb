@@ -12,4 +12,10 @@ class User < ApplicationRecord
   def unread_notifications
     self.notifications.any? { |notification| !notification.read }
   end
+
+  def screen_time
+    sum = 0
+    self.notifications.each { |notification| sum += notification.answer }
+    # sum/self.notifications.size
+  end
 end

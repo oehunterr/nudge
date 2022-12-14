@@ -28,6 +28,11 @@ class GroupsController < ApplicationController
     @group.update(params[:group])
   end
 
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+  end
+
   private
 
   def groups_params
