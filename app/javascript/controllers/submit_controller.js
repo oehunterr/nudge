@@ -17,7 +17,7 @@ export default class extends Controller {
   })
     .then(response => response.json())
     .then(() => {
-      // console.log("after response")
+      console.log("after response")
       // this.checkboxTarget.insertAdjacentHTML("beforeend", data.inserted_item)
       // this.checkboxTarget.classList.toggle("d-none")
       // console.log(this.checkboxTarget)

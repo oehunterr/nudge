@@ -4,10 +4,10 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name])
 
     # For additional in app/views/devise/registrations/edit.html.erb
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[first_name last_name])
   end
 
   def search_habit
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
         OR users.first_name @@ :query
         OR users.last_name @@ :query
       SQL
-      @search_results = Habit.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+      @search_results = current_user.habits.joins(:user).where(sql_query, query: "%#{params[:query]}%")
     else
       @search_results = Habit.all
     end
