@@ -10,29 +10,29 @@
       <%= link_to habits_path do %>
         <div class="cards card-habit">
           <div class="icons habcolor">
-              <i class="fa-solid fa-business-time"></i>
+              <i class="fa-regular fa-folder"></i>
           </div>
           <h6>Habits</h6>
           <p><%= @milestone.size %> habits</p>
         </div>
       <%end%>
-      <%= link_to do %>
+      <%= link_to perfomance_path do %>
         <div class="cards card-milestones">
           <div class="icons milcolour ">
-            <i class="fa-solid fa-bullseye "></i>
+          <i class="fa-solid fa-chart-simple"></i>
           </div>
-          <h6>Milestones</h6>
-          <p><%= @milestone.size %> milestones</p>
+          <h6>Perfomance</h6>
+          <%# <p><%= @milestone.size milestones</p>%>
         </div>
       <%end%>
     </div>
     <div class="grid second-line">
-      <%= link_to perfomance_path do %>
+      <%= link_to new_group_path  do %>
         <div class="cards card-perfomance">
           <div class="icons perfomancecolor">
-            <i class="fa-solid fa-chart-simple"></i>
+           <i class="fa-solid fa-people-group"></i>
           </div>
-          <h6>Perfomance</h6>
+          <h6>Create groups</h6>
         </div>
       <%end%>
 

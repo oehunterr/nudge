@@ -5,10 +5,9 @@
     <%= f.association :user,
       legend_tag: false,
       as: :check_boxes,
-      input_html: { class: "tag-selector" },
+      input_html: { class: "tag-selector"},
       item_wrapper_class: "tag-item",
       label_method: :first_name, value_method: :id %>
     <%= f.submit "Add friends", class: "btn add-group-new-btn" %>
   <% end %>
 </div>
-
