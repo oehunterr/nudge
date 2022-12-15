@@ -66,6 +66,12 @@
   }
 }
 
+.social-contracts {
+    font-size: 12px;
+    color: #5B67CA;
+    margin-bottom: 30px;
+}
+
 .gg-trash {
   display: flex;
   font-size: 20px;
@@ -75,12 +81,16 @@
 }
 
 .create-groups{
-  margin-top: 80px;
+  margin-top: 50px;
 
   h1{
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
+}
 
+.group-friends-img {
+  width: 275px;
+  height: 250px;
 }
 
 .no-groups-footer{

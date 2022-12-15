@@ -1,11 +1,12 @@
-<div class= "container create-new-groups">
-     <h1 class = "title-new-group">Create a new group</h1>
-    <%= simple_form_for @group do |f| %>
-      <%= f.input :name,
-        label: false,
-        input_html: { label: "name", placeholder: "Type your group name" } %>
-      <%= f.input :habit_id, class: "new-group-name", label: false, prompt: 'Select a habit', :collection => @habits%>
-      <%= f.submit "Create", class: "btn group-new-btn"%>
-    <% end %>
-     <%= image_tag "new-group2.jpg", class: "new-group-img" %>
+<div class= "container create-groups">
+  <h1 class = "title-addfriends">Create a group</h1>
+  <p class= "social-contracts">Social contracts are binding!<p>
+  <%= simple_form_for @group do |f| %>
+    <%= f.input :name,
+      label: false,
+      input_html: { label: "name", placeholder: "Type your group name" } %>
+    <%= f.input :habit_id, :collection => @habits %>
+    <%= f.submit "Create", class: "btn milestone-new-btn"%>
+  <% end %>
 </div>
+  <img src="<%= image_path 'friends.jpg'%>" class="group-friends-img" alt="">
