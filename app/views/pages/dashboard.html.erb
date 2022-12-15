@@ -41,6 +41,6 @@
   </div>
     <h4 class="performance-title">Performance</h4>
   <div class="performance-container">
-    <%= pie_chart @milestone.group(:title).sum(:duration).merge({"Social Media time" => current_user.screen_time_total}), empty: "You need some milestones!", suffix: " Hours", legend: false, width: "250px", height: "250px", dataset: {borderWidth: 1, spacing: 2, offset: 2, borderRadius: 10}, donut: true, colors: ["#8F99EB", "#E88B8C", "#7EC8E7", "#d0ffce"] %>
+    <%= pie_chart @milestone.group(:title).sum(:duration).merge({"Social Media time" => current_user.screen_time_total}), empty: "You need some milestones!", suffix: " Hours", legend: false, width: "250px", height: "250px", dataset: {borderWidth: 1, spacing: 2, offset: 2, borderRadius: 10}, donut: true, colors: ["#8F99EB", "#E88B8C", "#7EC8E7", "#D0FFCE"] %>
   </div>
 </div>
