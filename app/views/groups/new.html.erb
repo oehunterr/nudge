@@ -1,5 +1,6 @@
 <div class= "container create-groups">
-  <h1 class = "title-addfriends">Create a new group</h1>
+  <h1 class = "title-addfriends">Create a group</h1>
+  <p class= "social-contracts">Social contracts are binding!<p>
   <%= simple_form_for @group do |f| %>
     <%= f.input :name,
       label: false,
@@ -8,3 +9,4 @@
     <%= f.submit "Create", class: "btn milestone-new-btn"%>
   <% end %>
 </div>
+  <img src="<%= image_path 'friends.jpg'%>" class="group-friends-img" alt="">

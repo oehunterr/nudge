@@ -16,6 +16,7 @@ class User < ApplicationRecord
   def screen_time
     sum = 0
     self.notifications.each { |notification| sum += notification.answer }
-    # sum/self.notifications.size
+    @screen_time = User.screen_time
+    self.notifications.size
   end
 end
