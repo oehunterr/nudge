@@ -1,0 +1,5 @@
+meta_product_name: "Nudge"
+meta_title: "Nudge - Swap social media for real world habits"
+meta_description: 'A app which tracks your sm useage & helps you build better habits - real life meet ups, meditation sessions etc. "victories" & "needs improvement"'
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "nill"   # required for Twitter Cards
