@@ -7,6 +7,8 @@ Milestone.destroy_all
 puts "Milestones deleted"
 Group.destroy_all
 puts "Groups deleted"
+Notification.destroy_all
+puts "Notifications deleted"
 User.destroy_all
 puts "Users deleted"
 puts "\ncreating users..."
@@ -15,6 +17,7 @@ second_user = User.create!(email: "test@test.com", password: "test@test.com", fi
 third_user = User.create!(email: "olih@gmail.com", password: "olih@gmail.com", first_name: "Oliver", last_name: "Eugene", age: 25 )
 puts "#{first_user.first_name} is created"
 puts "#{second_user.first_name} is created"
+Notification.create!(user: third_user, answer: "200", read: true)
 
 # puts "Creating 4 Habits and assigin to first user..."
 # Habit.create!(title: "Coding & Programming", description: Faker::Quote.yoda, start_date: Faker::Date.forward(days: 31), end_date: Faker::Date.forward(days: 31) + 78, user: first_user, master: true )
@@ -33,16 +36,16 @@ habit6 = Habit.create!(title: "Seeing family more 👨‍👩‍👧‍👦", de
 #   habit.save!
 # end
 # Milestone.new(title: "Faker::Hobby.activity", description: Faker::Quote.yoda, start_time: Faker::Date.forward(days: 2), end_time: Faker::Date.forward(days: 7) + 7.1, habit: first_habit, completed: true )
-Milestone.create!(title: 'Running 10k', description: '10k - 2 weeks', start_time: DateTime.parse('20220101 09: 00: 00'), end_time: DateTime.parse('20220401 09: 00: 00'), habit: habit1, completed: true)
-Milestone.create!(title: 'Running 15k', description: '15k - 2 months', start_time: DateTime.parse('20220401 09: 00: 00'), end_time: DateTime.parse('20220601 09: 00: 00'), habit: habit1, completed: true)
-Milestone.create!(title: 'Speed work', description: 'run 5 x 5k (25min pace)', start_time: DateTime.parse('20220601 09: 00: 00'), end_time: DateTime.parse('20220801 09: 00: 00'), habit: habit1, completed: true)
-Milestone.create!(title: 'The Big One', description: 'The big one in a year', start_time: DateTime.parse('20220801 09: 00: 00'), end_time: DateTime.parse('20221216 09: 00: 00'), habit: habit1, completed: true)
+Milestone.create!(title: 'Running 10k', description: '10k - 2 weeks', start_time: DateTime.parse('20220101 09: 00: 00'), end_time: DateTime.parse('20220101 09: 00: 00').forward(hour: 4), habit: habit1, completed: true)
+Milestone.create!(title: 'Running 15k', description: '15k - 2 months', start_time: DateTime.parse('20220401 09: 00: 00'), end_time: DateTime.parse('20220401 09: 00: 00').forward(hour: 4), habit: habit1, completed: true)
+Milestone.create!(title: 'Speed work', description: 'run 5 x 5k (25min pace)', start_time: DateTime.parse('20220601 09: 00: 00'), end_time: DateTime.parse('20220601 09: 00: 00').forward(hour: 4), habit: habit1, completed: true)
+Milestone.create!(title: 'The Big One', description: 'The big one in a year', start_time: DateTime.parse('20220801 09: 00: 00'), end_time: DateTime.parse('20220801 09: 00: 00').forward(hour: 4), habit: habit1, completed: true)
 
-Milestone.create!(title: '5 min', description: 'Meditate for 5 mins one evening', start_time: DateTime.parse('20220101 09: 00: 00'), end_time: DateTime.parse('20220107 09: 00: 00'), habit: habit2, completed: false)
+Milestone.create!(title: '5 min', description: 'Meditate for 5 mins one evening', start_time: DateTime.parse('20220101 09: 00: 00'), end_time: DateTime.parse('20220101 09: 00: 00'), habit: habit2, completed: false)
 
-Milestone.create!(title: 'Learn 3 words this week', description: '', start_time: DateTime.parse('20221101 09: 00: 00'), end_time: DateTime.parse('20220107 09: 00: 00'), habit: habit3, completed: true)
-Milestone.create!(title: 'Learn 3 words this week', description: '', start_time: DateTime.parse('20221108 09: 00: 00'), end_time: DateTime.parse('20220114 09: 00: 00'), habit: habit3, completed: true)
-Milestone.create!(title: 'Learn 3 words this week', description: '', start_time: DateTime.parse('20221115 09: 00: 00'), end_time: DateTime.parse('20220121 09: 00: 00'), habit: habit3, completed: true)
+Milestone.create!(title: 'Learn 3 words this week', description: '', start_time: DateTime.parse('20221101 09: 00: 00'), end_time: DateTime.parse('20221101 09: 00: 00'), habit: habit3, completed: true)
+Milestone.create!(title: 'Learn 3 words this week', description: '', start_time: DateTime.parse('20221108 09: 00: 00'), end_time: DateTime.parse('20221108 09: 00: 00'), habit: habit3, completed: true)
+Milestone.create!(title: 'Learn 3 words this week', description: '', start_time: DateTime.parse('20221115 09: 00: 00'), end_time: DateTime.parse('20221115 09: 00: 00'), habit: habit3, completed: true)
 
 # puts "Creating 3 Milestones and assiging to first habit..."
 # 3.times do

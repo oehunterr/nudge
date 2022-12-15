@@ -9,14 +9,23 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  def read_notifications
+    self.notifications.where(read: true)
+  end
+
   def unread_notifications
     self.notifications.any? { |notification| !notification.read }
   end
 
   def screen_time
     sum = 0
-    self.notifications.each { |notification| sum += notification.answer }
-    @screen_time = User.screen_time
-    self.notifications.size
+    self.read_notifications.each { |notification| sum += notification.answer.to_i }
+    sum/self.notifications.size
+  end
+
+  def screen_time_total
+    sum = 0
+    self.read_notifications.each { |notification| sum += notification.answer.to_i }
+    sum
   end
 end
