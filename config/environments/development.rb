@@ -9,6 +9,11 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  # config.hosts << /\A[a-z\d-]+\.loca\.lt\z/
+  # config.hosts << "cold-clubs-exist-2-216-121-187.loca.lt"
+
+  config.hosts.clear
+
   # Do not eager load code on boot.
   config.eager_load = false
 

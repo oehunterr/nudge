@@ -1,7 +1,7 @@
 <div class="nav-container">
   <div class="nav-content">
     <%= link_to dashboard_path do %><i class="gg-home-alt"></i><% end %>
-    <%= link_to perfomance_path do %><i class="gg-performance"></i><% end %>
+    <%= link_to habits_path do %><i class="fa-sharp fa-solid fa-pen-nib" id="bell"></i><% end %>
     <%= link_to new_habit_path do %><%= image_tag "plus_svg.svg", id: "svg-plus" %><% end %>
     <%= link_to groups_path do %><i class="gg-website"></i></i><% end %>
     <% if user_signed_in?  %>
