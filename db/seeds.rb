@@ -24,9 +24,9 @@ Notification.create!(user: third_user, answer: "200", read: true)
 
 habit1 = Habit.create!(title: "Marathon 🏃‍♂", description: "Marathon prep (12 months)", start_date: Date.today - 6.month, end_date: Date.today, user: third_user, master: true)
 
-habit3 = Habit.create!(title: "Vocabulary building", description: "Learn 3 words a week", start_date: Date.today - 6.month, end_date: Date.today + rand(1..100).day, user: third_user, master: false)
+habit3 = Habit.create!(title: "Vocabulary building 📘", description: "Learn 3 words a week", start_date: Date.today - 5.month, end_date: Date.today + rand(1..100).day, user: third_user, master: false)
 
-habit5 = Habit.create!(title: "Coding-Rails 🧑‍💻", description: "Building a rails application", start_date: Date.today - 6.month, end_date: Date.today + rand(1..100).day, user: third_user, master: false)
+habit5 = Habit.create!(title: "Coding-Rails 🧑‍💻", description: "Building a rails application", start_date: Date.today - 4.month, end_date: Date.today + rand(1..100).day, user: third_user, master: false)
 habit6 = Habit.create!(title: "Seeing family more 👨‍👩‍👧‍👦", description: "Driving to see relatives once a month", start_date: Date.today - 6.month, end_date: Date.today + rand(1..100).day, user: third_user, master: false)
 # 3.times do
 #   habit = Habit.new(title: Faker::Hobby.activity, description: Faker::Quote.yoda, start_date: Date.today + rand(1..10).day, end_date: Date.tomorrow + 78.hour, user: first_user )
