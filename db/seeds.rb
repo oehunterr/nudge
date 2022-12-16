@@ -36,9 +36,9 @@ habit6 = Habit.create!(title: "Seeing family more 👨‍👩‍👧‍👦", de
 
 Milestone.create!(title: 'Running 10k', description: '10k - 2 weeks', start_time: Date.today - 150.day, end_time: Date.today - 148.day, habit: habit1, completed: true)
 Milestone.create!(title: 'Running 15k', description: '15k - 2 months', start_time: Date.today - 130.day, end_time: Date.today - 127.day, habit: habit1, completed: true)
-Milestone.create!(title: 'Speed work', description: 'run 5 x 5k (25min pace)', start_time: Date.today - 50.day, end_time: Date.today - 45.day, habit: habit1, completed: true)
+Milestone.create!(title: 'Speed work', description: 'run 5 x 5k (25min pace)', start_time: Date.today - 50.day, end_time: Date.today - 46.day, habit: habit1, completed: true)
 Milestone.create!(title: 'THE marathon', description: 'The big one in a year', start_time: Date.today - 1.day, end_time: Date.today, habit: habit1, completed: true)
-Milestone.create!(title: 'Words', description: 'Learning 3 words a week', start_time: Date.today - 20.day, end_time: Date.today - 15.day, habit: habit3, completed: true)
+Milestone.create!(title: 'Words', description: 'Learning 3 words a week', start_time: Date.today - 20.day, end_time: Date.today - 16.day, habit: habit3, completed: true)
 # puts "Creating 3 Milestones and assiging to first habit..."
 # 3.times do
 #   milestone = Milestone.new(title: Faker::Hobby.activity, description: Faker::Quote.yoda, start_time: Date.today + rand(1..10).day, end_time: Date.tomorrow + 78.hour, habit: first_habit, completed: true )

@@ -1,4 +1,5 @@
 class HabitsController < ApplicationController
+  before_action :search_habit
 
   def index
     @habits = Habit.all
@@ -49,5 +50,19 @@ class HabitsController < ApplicationController
 
   def habit_params
     params.require(:habit).permit(:title, :description, :start_date, :end_date, :master)
+  end
+
+  def search_habit
+    if params[:query].present?
+      sql_query = <<~SQL
+        habits.title @@ :query
+        OR habits.description @@ :query
+        OR users.first_name @@ :query
+        OR users.last_name @@ :query
+      SQL
+      @search_results = current_user.habits.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @search_results = current_user.habits
+    end
   end
 end
